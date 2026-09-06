@@ -115,6 +115,18 @@ h2{margin:0;font-size:29px;letter-spacing:-.03em}.section-head p{margin:0;color:
 .photo-caption{position:absolute;left:15px;bottom:14px;padding:7px 10px;border-radius:999px;background:rgba(10,20,28,.58);backdrop-filter:blur(8px);color:#fff;font-size:12px}
 @media(max-width:700px){.photo-grid{grid-template-columns:1fr}.photo-main{min-height:330px}.photo-side{grid-template-columns:1fr 1fr;grid-template-rows:none}.photo-side .photo{min-height:180px}}
 
+
+.package-price-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+.package-price-table th,.package-price-table td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:center}
+.package-price-table th:first-child,.package-price-table td:first-child{text-align:left}
+.package-price-table tr.selected{background:#fff1f1}
+.party-picker{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.party-btn{border:1px solid var(--line);background:#fff;padding:8px 12px;border-radius:10px;cursor:pointer;font:inherit}
+.party-btn.active{background:#1f2a30;color:#fff;border-color:#1f2a30}
+.package-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.package-summary .price{background:#fafbfb}
+@media(max-width:700px){.package-summary{grid-template-columns:1fr}}
+
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr}.quick-grid{grid-template-columns:repeat(2,1fr)}
   .flight-grid,.cols{grid-template-columns:1fr}.store-grid{grid-template-columns:repeat(2,1fr)}
@@ -277,16 +289,62 @@ h2{margin:0;font-size:29px;letter-spacing:-.03em}.section-head p{margin:0;color:
   </section>
 
   <section id="package">
-    <div class="section-head"><h2>🎿 Hakuba Package</h2><p>套裝已含的用品，採買時可直接略過</p></div>
+    <div class="section-head"><h2>🎿 Hakuba Package</h2><p>26/27 白馬套餐｜目前行程對應 4天3夜・滑2天</p></div>
     <div class="card">
-      <div class="package-list">
-        <div class="package-item">✅ 滑雪教練指導</div><div class="package-item">✅ 每日接駁</div>
-        <div class="package-item">✅ 雪板＋雪靴</div><div class="package-item">✅ 雪衣＋雪褲</div>
-        <div class="package-item">✅ 雪鏡＋安全帽</div><div class="package-item">✅ 滑雪手套</div>
-        <div class="package-item">✅ 纜車票</div><div class="package-item">✅ 溫泉入浴</div>
-        <div class="package-item">✅ 白馬住宿</div><div class="package-item">❌ 機票／日本交通／三餐／保險</div>
+      <div class="cols">
+        <div>
+          <h3 style="margin-top:0">💴 套餐價目</h3>
+          <table class="package-price-table" id="package-price-table">
+            <thead><tr><th>方案</th><th>1人</th><th>2人</th><th>3人</th><th>4人</th></tr></thead>
+            <tbody>
+              <tr><td>3天2夜 2滑</td><td>45,000</td><td>36,800</td><td>33,800</td><td>29,800</td></tr>
+              <tr class="selected"><td><b>4天3夜 2滑</b></td><td>49,800</td><td>39,800</td><td>36,800</td><td>33,800</td></tr>
+              <tr><td>4天3夜 2.5滑</td><td>55,000</td><td>42,800</td><td>39,800</td><td>36,800</td></tr>
+              <tr><td>5天4夜 3滑</td><td>69,800</td><td>53,800</td><td>45,800</td><td>42,800</td></tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top:16px">
+            <b>滑雪方案</b>
+            <div class="party-picker">
+              <button class="party-btn plan-btn active" data-plan="2">2滑</button>
+              <button class="party-btn plan-btn" data-plan="2.5">2.5滑</button>
+            </div>
+            <b>同行人數</b>
+            <div class="party-picker">
+              <button class="party-btn person-btn" data-party="1">1人</button>
+              <button class="party-btn person-btn" data-party="2">2人</button>
+              <button class="party-btn person-btn" data-party="3">3人</button>
+              <button class="party-btn person-btn active" data-party="4">4人</button>
+            </div>
+          </div>
+
+          <div class="package-summary">
+            <div class="price"><small>目前方案</small><b id="package-plan-label">4天3夜 2滑</b></div>
+            <div class="price"><small>每人套餐</small><b id="package-per-person">NT$ 33,800</b></div>
+            <div class="price"><small>全團套餐</small><b id="package-group-total">NT$ 135,200</b></div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="margin-top:0">📦 套餐包含</h3>
+          <div class="package-list">
+            <div class="package-item">✅ 白馬住宿</div><div class="package-item">✅ 滑雪教練</div>
+            <div class="package-item">✅ 每日接駁</div><div class="package-item">✅ 雪板＋雪靴</div>
+            <div class="package-item">✅ 雪衣＋雪褲</div><div class="package-item">✅ 雪鏡＋安全帽</div>
+            <div class="package-item">✅ 滑雪手套</div><div class="package-item">✅ 纜車票</div>
+            <div class="package-item">✅ 溫泉入浴</div><div class="package-item">❌ 機票／日本交通／三餐／保險</div>
+          </div>
+
+          <div class="note" style="margin-top:14px">
+            <b>🕘 上課時段｜全天 5–6 hr</b><br>
+            上午 09:00–11:30<br>
+            下午 13:00–15:30
+          </div>
+          <div class="note good">💡 套裝雖然有提供雪鏡與滑雪手套，但仍強烈建議自備。優先採買：護臀／護膝／護腕 → 雪鏡 → 滑雪手套 → 雪襪 → 底層衣褲 → 頭套／面罩。</div>
+          <div class="note warn">📍 接駁：白馬村住宿業者多有巴士站接駁；民宿與雪場間也有密集接駁。訂房後記得向住宿方確認。</div>
+        </div>
       </div>
-      <div class="note good">💡 套裝雖然有提供雪鏡與滑雪手套，但仍強烈建議自備。真正優先採買可抓：護臀／護膝／護腕 → 雪鏡 → 滑雪手套 → 雪襪 → 底層衣褲 → 頭套／面罩。</div>
     </div>
   </section>
 
@@ -385,11 +443,17 @@ h2{margin:0;font-size:29px;letter-spacing:-.03em}.section-head p{margin:0;color:
   <section id="budget">
     <div class="section-head"><h2>💰 Budget Tracker</h2><p>輸入金額後自動加總</p></div>
     <div class="card">
+      <div class="package-summary" style="margin-top:0;margin-bottom:18px">
+        <div class="price"><small>前置裝備省錢版</small><b>約 NT$12,000</b></div>
+        <div class="price"><small>前置裝備推薦值</small><b>約 NT$15,000 ⭐</b></div>
+        <div class="price"><small>裝備買好一點</small><b>約 NT$20,000–23,000</b></div>
+      </div>
+      <div class="note">整趟舒服版可先抓：套餐＋機票＋東京↔白馬交通＋前置裝備＋吃飯／保險／購物。實際金額會依同行人數、機票和購物而變動。</div>
       <table class="budget-table">
         <thead><tr><th>項目</th><th>實際金額</th></tr></thead>
         <tbody>
           <tr><td>✈️ 機票</td><td><input class="money" data-key="b-flight" type="number" placeholder="例如 14000"></td></tr>
-          <tr><td>🏂 白馬滑雪套裝</td><td><input class="money" data-key="b-package" type="number"></td></tr>
+          <tr><td>🏂 白馬滑雪套裝</td><td><input class="money" id="budget-package" data-key="b-package" type="number" value="33800" readonly></td></tr>
           <tr><td>🚆 日本境內交通</td><td><input class="money" data-key="b-transport" type="number" placeholder="新幹線＋白馬巴士等"></td></tr>
           <tr><td>🏨 額外住宿</td><td><input class="money" data-key="b-hotel" type="number" placeholder="1/29 飛可填 0"></td></tr>
           <tr><td>🛍️ 滑雪用品</td><td><input class="money" data-key="b-gear" type="number"></td></tr>
@@ -438,20 +502,49 @@ document.querySelectorAll('.toggle-btn').forEach(btn=>{
   });
 });
 
+const packagePrices={
+  '2':{1:49800,2:39800,3:36800,4:33800},
+  '2.5':{1:55000,2:42800,3:39800,4:36800}
+};
+let party=parseInt(localStorage.getItem(PREFIX+'party')||'4',10);
+let skiPlan=localStorage.getItem(PREFIX+'skiPlan')||'2';
+
+function updatePackage(){
+  document.querySelectorAll('.person-btn').forEach(b=>b.classList.toggle('active',parseInt(b.dataset.party,10)===party));
+  document.querySelectorAll('.plan-btn').forEach(b=>b.classList.toggle('active',b.dataset.plan===skiPlan));
+  const per=packagePrices[skiPlan][party];
+  document.getElementById('package-plan-label').textContent='4天3夜 '+skiPlan+'滑';
+  document.getElementById('package-per-person').textContent='NT$ '+per.toLocaleString('zh-TW');
+  document.getElementById('package-group-total').textContent='NT$ '+(per*party).toLocaleString('zh-TW');
+  const bp=document.getElementById('budget-package');
+  if(bp) bp.value=per;
+  localStorage.setItem(PREFIX+'party',party);
+  localStorage.setItem(PREFIX+'skiPlan',skiPlan);
+  calcBudget();
+}
+document.querySelectorAll('.person-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{party=parseInt(btn.dataset.party,10);updatePackage();});
+});
+document.querySelectorAll('.plan-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{skiPlan=btn.dataset.plan;updatePackage();});
+});
+
 function calcBudget(){
   let sum=0;
   document.querySelectorAll('.money').forEach(i=>{
-    localStorage.setItem(PREFIX+i.dataset.key,i.value);
+    if(i.id!=='budget-package') localStorage.setItem(PREFIX+i.dataset.key,i.value);
     const v=parseFloat(i.value||0);
     if(!isNaN(v))sum+=v;
   });
   document.getElementById('total').textContent='NT$ '+sum.toLocaleString('zh-TW');
 }
 document.querySelectorAll('.money').forEach(i=>{
-  i.value=localStorage.getItem(PREFIX+i.dataset.key)||'';
-  i.addEventListener('input',calcBudget);
+  if(i.id!=='budget-package'){
+    i.value=localStorage.getItem(PREFIX+i.dataset.key)||'';
+    i.addEventListener('input',calcBudget);
+  }
 });
-calcBudget();
+updatePackage();
 
 function countdown(){
   const target=new Date('2027-01-29T00:00:00+09:00').getTime();

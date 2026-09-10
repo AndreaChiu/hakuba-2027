@@ -80,23 +80,319 @@ section{padding:28px 0}h2{font-size:23px}
 .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ab-card{border:1px solid #e0e1dc;border-radius:14px;padding:11px;background:#fafaf8}.ab-head span{display:block;font-size:9px;letter-spacing:.12em;font-weight:900;color:#7c8682}.ab-head b{display:block;font-size:13px;margin-top:3px}.ab-note{font-size:9.5px!important;color:#737a77;margin:6px 0 9px!important}.mini-days{display:grid;gap:5px}.mini-days>div{display:grid;grid-template-columns:45px 1fr;gap:6px;padding:7px;border-radius:9px;background:#fff;border:1px solid #ecece7}.mini-days b,.mini-days span{font-size:9.5px}.mini-days .ski{background:#edf3f1}.mini-days .move{background:#f5eee4}.ab-bottom{margin-top:9px;padding:9px;border-radius:10px;background:#eef0ed;font-size:10px}@media(max-width:1050px){.ab-grid{grid-template-columns:1fr}}
 .price-box{background:#fff;border:1px solid #deddd7;border-radius:18px;padding:15px}.people-picker{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.people-picker button{border:1px solid #d9dad5;background:#f8f8f5;border-radius:11px;padding:10px 6px;font-weight:800;cursor:pointer;color:#4c5350}.people-picker button.active{background:#252827;color:#fff;border-color:#252827}.price-result{display:grid;grid-template-columns:.8fr 1.4fr 1fr;gap:8px;margin-top:10px}.price-result>div{background:#f5f4f0;border-radius:12px;padding:11px}.price-result small{display:block;font-size:9px;color:#777e7b;margin-bottom:4px}.price-result b{font-size:14px}.price-result .main-price{background:#eaf1ee}.price-result .main-price b{font-size:22px}.price-result .main-price span{font-size:10px}.price-tiers{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.price-tiers span{font-size:9.5px;color:#737a77;padding:5px 7px;border-radius:8px;background:#fafaf8}.price-tiers b{color:#333}
 @media(max-width:650px){.price-result{grid-template-columns:1fr 1fr}.price-result .main-price{grid-column:span 2}.people-picker{grid-template-columns:repeat(4,1fr)}}
+
+.plans-side-by-side{display:block!important}#plan-short{width:100%;border-top:5px solid #8b9c96}.ab-compare{border:1px solid #dddeda;border-radius:14px;overflow:hidden;margin:12px 0 14px;background:#fff}.ab-row{display:grid;grid-template-columns:90px 1fr 1fr;border-bottom:1px solid #ecece7}.ab-row:last-child{border-bottom:0}.ab-row>*{padding:9px 10px;font-size:10.5px}.ab-row>*:first-child{background:#fafaf7;color:#747b78;font-weight:700}.ab-title{background:#252827;color:#fff}.ab-title>*:first-child{background:#252827}.ab-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px!important}.ab-card{padding:14px!important}.ab-card.plan-a{border-top:4px solid #8fa39c}.ab-card.plan-b{border-top:4px solid #b79a75}.mini-days.detailed>div{grid-template-columns:64px 1fr!important;padding:9px!important}.mini-days.detailed b{font-size:10.5px!important}.mini-days.detailed span{font-size:10.5px!important;line-height:1.6!important}.mini-days.detailed em{color:#8a8f8d;font-style:normal;font-size:9.5px}.plan-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}.plan-tags span{font-size:9px;padding:5px 7px;border-radius:999px;background:#f0f1ed}.private-trip{margin-top:16px;border:1px solid #d9dad5;border-radius:16px;background:#f7f7f4;overflow:hidden}.private-trip summary{list-style:none;cursor:pointer;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}.private-trip summary::-webkit-details-marker{display:none}.private-trip summary span small{display:block;font-size:9px;letter-spacing:.12em;color:#8a918e;font-weight:800}.private-trip summary span b{display:block;font-size:13px;margin-top:3px;color:#535956}.private-trip summary em{font-size:9.5px;font-style:normal;color:#7d8581;border:1px solid #d4d6d2;border-radius:999px;padding:5px 8px;background:#fff}.private-trip[open] summary{border-bottom:1px solid #dedfda}.hidden-column{border:0!important;border-radius:0!important;background:#fff!important}@media(max-width:760px){.ab-grid{grid-template-columns:1fr!important}.ab-row{grid-template-columns:64px 1fr 1fr}.ab-row>*{padding:8px 6px;font-size:9.5px}}
+
+/* V29: short and long itinerary are separate sections */
+.long-trip-section{margin-top:28px;padding:18px 0 0;border-top:1px solid #d8d9d5;background:transparent}
+.long-trip-heading{margin-bottom:12px;padding:16px 18px;border-radius:17px;background:#f1ece4}
+.long-trip-heading small{font-size:9px;letter-spacing:.14em;font-weight:900;color:#8a765d}
+.long-trip-heading h2{margin:4px 0 5px;font-size:21px}
+.long-trip-heading p{margin:0;color:#77746f;font-size:11px;line-height:1.6}
+.long-trip-section .hidden-column{display:block!important;border-top:5px solid #b28e62!important;border-radius:17px!important}
+.private-trip summary{display:none!important}
+
+/* V30 transport columns */
+.transport-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.transport-col{border:1px solid #d9dad5;border-radius:18px;padding:13px;background:#fff}
+.short-transport{border-top:5px solid #8b9c96}
+.long-transport{border-top:5px solid #b28e62}
+.transport-col-head{padding:3px 3px 11px;border-bottom:1px solid #ecece7;margin-bottom:9px}
+.transport-col-head small{font-size:9px;letter-spacing:.13em;font-weight:900;color:#808784}
+.transport-col-head h3{font-size:16px;margin:4px 0}
+.transport-col-head p{font-size:10px;color:#777e7b;line-height:1.55;margin:0}
+.transport-col .trow{grid-template-columns:32px 1fr!important;padding:10px!important}
+.transport-col .trow>.status,.transport-col .trow>.mini-link{grid-column:2;justify-self:start}
+.transport-col .trow p{font-size:10.5px!important}
+.route-summary{margin-top:9px;padding:10px;border-radius:11px;background:#f3f3ef}
+.route-summary b{display:block;font-size:10px;margin-bottom:3px}
+.route-summary span{font-size:9.5px;color:#6e7572;line-height:1.5}
+.transport-summary{margin-top:12px}
+@media(max-width:760px){.transport-columns{grid-template-columns:1fr}}
+.custom-budget{background:#fafaf7;border:1px solid #dedfd9;border-radius:18px;padding:15px}.budget-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.budget-grid label{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border:1px solid #e3e4df;border-radius:12px;padding:10px 11px;font-size:10px}.budget-grid label div{white-space:nowrap;font-size:9px;color:#838986}.budget-input{width:88px;border:0;border-bottom:1px solid #cdd0ca;background:transparent;text-align:right;font-weight:800;color:#303432;padding:3px}.budget-input:focus{outline:none;border-bottom-color:#667a73}.budget-total{margin-top:10px;background:#272b29;color:#fff;border-radius:13px;padding:13px 14px;display:flex;justify-content:space-between;align-items:center}.budget-total span{font-size:10px}.budget-total strong{font-size:20px}.budget-actions{display:flex;justify-content:space-between;align-items:center;margin-top:8px;color:#858b88}.budget-actions button{border:1px solid #d5d7d2;background:#fff;border-radius:999px;padding:5px 10px;font-size:9px}@media(max-width:650px){.budget-grid{grid-template-columns:1fr}.budget-input{width:105px}}
+.hero-choice{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.hero-choice a{display:block;text-decoration:none;border-radius:16px;padding:14px 16px;font-size:12px;font-weight:850;border:1px solid #d8d9d5;transition:.15s}
+.hero-choice a:first-child{background:#252827;color:#fff}
+.hero-choice a:last-child{background:#fff;color:#353a38}
+.hero-choice a small{display:block;font-size:9px;letter-spacing:.08em;opacity:.68;margin-top:4px;font-weight:650}
+.hero-joke{font-size:clamp(17px,3.5vw,22px);line-height:1.65;margin:14px 0 0;font-weight:800;color:#343836}
+.hero-joke span{display:block}
+@media(max-width:650px){.hero-choice{grid-template-columns:1fr}.hero-choice a{padding:13px 14px}}
+
+/* V34 — premium alpine editorial redesign */
+:root{
+  --paper:#f3f0e9;
+  --paper-2:#faf8f3;
+  --ink:#1f2523;
+  --muted:#737b77;
+  --line:rgba(31,37,35,.14);
+  --pine:#66766f;
+  --snow:#f8f7f2;
+  --warm:#b59062;
+}
+body{
+  background:
+    radial-gradient(circle at 15% 0%,rgba(255,255,255,.92),transparent 34%),
+    linear-gradient(180deg,#ebe8e1 0,#f7f5f0 30%,#efede7 100%)!important;
+  color:var(--ink)!important;
+  letter-spacing:.005em;
+}
+.wrap{width:min(1080px,calc(100% - 34px))!important}
+.editorial-hero{padding:22px 0 34px!important}
+.hero-topline{
+  display:flex;justify-content:space-between;gap:20px;
+  border-bottom:1px solid var(--line);padding-bottom:11px;
+  font-size:9px;letter-spacing:.23em;font-weight:850;color:#68706c;
+}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);
+  gap:26px;padding-top:26px;align-items:stretch;
+}
+.hero-main{
+  min-height:505px;position:relative;padding:34px 38px 36px;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.98),rgba(245,243,237,.95));
+  border:1px solid rgba(25,31,29,.10);border-radius:3px;
+  box-shadow:0 26px 70px rgba(34,40,37,.08);
+  overflow:hidden;
+}
+.hero-main:after{
+  content:"";position:absolute;right:-80px;bottom:-115px;width:340px;height:340px;
+  border:1px solid rgba(31,37,35,.08);border-radius:50%;
+  box-shadow:0 0 0 55px rgba(31,37,35,.025),0 0 0 110px rgba(31,37,35,.017);
+}
+.hero-season{font-size:9px;letter-spacing:.24em;font-weight:850;color:#858d89}
+.hero-main h1{
+  position:relative;z-index:1;
+  font-family:Georgia,"Times New Roman","Noto Serif TC",serif!important;
+  font-size:clamp(48px,7.6vw,92px)!important;line-height:.88!important;
+  letter-spacing:-.055em!important;font-weight:500!important;
+  margin:40px 0 24px!important;
+}
+.hero-main h1 span{
+  font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  font-size:.78em;letter-spacing:-.02em;
+}
+.hero-rule{width:44px;height:1px;background:#252b28;margin:3px 0 21px}
+.hero-joke{
+  position:relative;z-index:1;max-width:520px;
+  margin:0!important;font-size:clamp(16px,2.1vw,22px)!important;
+  line-height:1.7!important;font-weight:500!important;color:#343b38!important;
+}
+.hero-joke strong{display:block;font-weight:900}
+.hero-joke span{display:block!important;color:#737a77;margin-top:2px;font-size:.79em}
+
+.hero-side{display:flex;flex-direction:column;gap:10px}
+.hero-side-label{
+  padding:4px 1px 8px;font-size:8px;letter-spacing:.22em;font-weight:900;color:#8a908d;
+}
+.route-card{
+  display:grid!important;grid-template-columns:38px 1fr 22px;gap:12px;align-items:center;
+  text-decoration:none!important;padding:19px 17px!important;border-radius:2px!important;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.route-card:hover{transform:translateY(-2px)}
+.route-normal{
+  background:#202624!important;color:#f7f6f1!important;border:1px solid #202624!important;
+  box-shadow:0 14px 34px rgba(31,37,35,.13);
+}
+.route-chaos{
+  background:#f7f4ed!important;color:#252a28!important;border:1px solid rgba(31,37,35,.13)!important;
+}
+.route-index{font-family:Georgia,serif;font-size:18px;opacity:.75}
+.route-card small{display:block;font-size:7.5px;letter-spacing:.17em;font-weight:900;opacity:.62;margin-bottom:5px}
+.route-card b{display:block;font-size:15px;letter-spacing:-.02em}
+.route-card p{margin:4px 0 0;font-size:9px;opacity:.66}
+.route-card i{font-style:normal;font-size:18px;font-weight:400}
+.hero-note{
+  margin-top:auto;background:#dfe4e0;padding:17px;border-radius:2px;border:1px solid rgba(31,37,35,.08)
+}
+.hero-note span{font-size:7px;letter-spacing:.2em;font-weight:900;color:#68736e}
+.hero-note b{display:block;font-family:Georgia,serif;font-size:28px;margin:4px 0 3px;font-weight:500}
+.hero-note p{font-size:9px;line-height:1.55;color:#626b67;margin:0}
+
+/* make the rest feel like a travel editorial, not a dashboard */
+nav{
+  background:rgba(244,241,234,.86)!important;
+  border-block:1px solid rgba(31,37,35,.11)!important;
+  backdrop-filter:blur(18px)!important
+}
+nav .wrap{padding:12px 0!important}
+nav a{font-size:10px!important;letter-spacing:.08em!important;text-transform:uppercase;color:#5d6662!important}
+
+section{padding:46px 0!important}
+section>h2,.wrap>section h2{
+  font-family:Georgia,"Times New Roman","Noto Serif TC",serif;
+  font-weight:500!important;font-size:clamp(25px,3.3vw,38px)!important;
+  letter-spacing:-.035em!important
+}
+.sub{font-size:11px!important;line-height:1.65!important;max-width:650px}
+
+.version,.detail,.forms-grid,.transport-columns{gap:13px!important}
+.vcard,.card,.ab-card,.transport-col,.custom-budget,.buy-group,.form-card{
+  border-radius:4px!important;
+  border-color:rgba(31,37,35,.11)!important;
+  box-shadow:0 12px 38px rgba(31,37,35,.045)!important;
+}
+.vcard,.card,.ab-card,.buy-group{background:rgba(255,255,255,.78)!important}
+.vcard{padding:21px!important}
+.vcard.long{background:#dde4e0!important}
+
+.day{
+  border-radius:3px!important;border-color:rgba(31,37,35,.10)!important;
+  padding:16px!important;background:rgba(255,255,255,.82)!important;
+  box-shadow:0 9px 26px rgba(31,37,35,.035)
+}
+.day.move{background:#eee7dc!important}
+.date{font-family:Georgia,serif!important;font-size:13px!important}
+.day h3{font-size:14px!important;letter-spacing:-.015em}
+.thumb{border-radius:2px!important}
+
+.plan-tab{
+  border-radius:3px!important;padding:17px!important;background:rgba(255,255,255,.82)!important;
+  border-color:rgba(31,37,35,.11)!important
+}
+.plan-tab.active{background:#222826!important}
+.trow{border-radius:3px!important;background:rgba(255,255,255,.84)!important}
+.status,.mini-link{border-radius:2px!important}
+.transport-summary div{border-radius:3px!important;background:#242a27!important}
+
+.check{border-radius:3px!important;background:rgba(255,255,255,.78)!important}
+.deadline{border-radius:3px!important;background:#212725!important}
+.link{border-radius:2px!important;background:#242a27!important}
+
+.custom-budget{background:#ebe8e0!important;padding:18px!important}
+.budget-grid label{border-radius:3px!important;background:#faf9f5!important}
+.budget-total{border-radius:3px!important}
+
+.forms-premium{
+  border-radius:4px!important;background:#1f2523!important;
+  padding:29px!important;box-shadow:0 25px 70px rgba(24,29,27,.14)!important
+}
+.form-feature,.form-card{border-radius:3px!important}
+.form-feature{background:#efe9de!important}
+.form-card{background:#303634!important}
+.deadline-chip,.form-feature a,.form-card a,.budget-head button{border-radius:2px!important}
+
+footer{border-top:1px solid var(--line);margin-top:20px}
+
+@media(max-width:760px){
+  .hero-grid{grid-template-columns:1fr;gap:11px}
+  .hero-main{min-height:420px;padding:26px 24px}
+  .hero-main h1{margin-top:32px!important;font-size:clamp(48px,17vw,76px)!important}
+  .hero-main:after{width:250px;height:250px;right:-95px;bottom:-80px}
+  .route-card{padding:16px 14px!important}
+  .hero-note{margin-top:1px}
+}
+
+.section-eyebrow{font-size:8px;letter-spacing:.24em;font-weight:900;color:#818985;margin-bottom:7px}
+.transport-ab{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.transport-route{background:#f9f7f2;border:1px solid rgba(31,37,35,.12);padding:20px}
+.dark-route{background:#222826;color:#f7f5ef}
+.route-head{padding-bottom:16px;border-bottom:1px solid rgba(31,37,35,.13)}
+.dark-route .route-head{border-color:rgba(255,255,255,.16)}
+.route-head span{font-size:8px;letter-spacing:.2em;font-weight:900;opacity:.62}
+.route-head b{display:block;font-family:Georgia,"Noto Serif TC",serif;font-size:20px;margin:5px 0}
+.route-head p{font-size:9.5px;line-height:1.6;margin:0;opacity:.66}
+.route-line{display:grid;grid-template-columns:32px 1fr;gap:11px;padding:15px 0;border-bottom:1px solid rgba(31,37,35,.1)}
+.dark-route .route-line{border-color:rgba(255,255,255,.12)}
+.route-line i{font-family:Georgia,serif;font-style:normal;font-size:14px;opacity:.45}
+.route-line small{font-size:8px;letter-spacing:.1em;opacity:.55}
+.route-line b{display:block;font-size:11px;margin:3px 0}
+.route-line p{font-size:9px;line-height:1.55;margin:0;opacity:.64}
+.route-line.snow i:after{content:" · 🏂";font-family:sans-serif;font-size:8px}
+.route-bottom{padding-top:15px;font-weight:900;font-size:10px}
+.route-bottom span{float:right;font-weight:500;opacity:.6}
+
+.photo-editorial{display:grid;grid-template-columns:1.35fr .65fr .65fr;grid-template-rows:190px 190px;gap:8px;margin-top:18px}
+.photo-editorial figure{margin:0;position:relative;overflow:hidden;background:#ddd}
+.photo-editorial .photo-large{grid-row:1/3}
+.photo-editorial img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.82) contrast(.96)}
+.photo-editorial figcaption{position:absolute;left:10px;bottom:9px;background:rgba(24,29,27,.72);color:#fff;padding:5px 7px;font-size:7px;letter-spacing:.13em}
+.photo-editorial figure:nth-child(4){grid-column:2}
+.photo-editorial figure:nth-child(5){grid-column:3}
+
+.estimate-wrap{display:grid;grid-template-columns:.72fr 1.28fr;border:1px solid rgba(31,37,35,.12);background:#f8f6f1;margin-top:17px}
+.estimate-main{padding:28px;background:#222826;color:#f8f6f1}
+.estimate-main small{font-size:8px;letter-spacing:.18em;opacity:.6}
+.estimate-main strong{display:block;font-family:Georgia,serif;font-weight:500;font-size:39px;margin:11px 0 0}
+.estimate-main span{font-size:10px;opacity:.7}
+.estimate-main p{font-size:9.5px;line-height:1.6;margin:20px 0 0;opacity:.7}
+.estimate-lines{padding:18px 22px}
+.estimate-lines>div{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-bottom:1px solid rgba(31,37,35,.09);font-size:10px}
+.estimate-lines b{font-family:Georgia,serif;font-size:12px}
+.estimate-lines .estimate-sum{border:0;padding-top:16px;font-weight:900}
+.estimate-lines .estimate-sum b{font-size:20px}
+.tiny-note{font-size:8.5px;line-height:1.6;color:#7a817d;margin-top:9px}
+@media(max-width:700px){
+ .transport-ab,.estimate-wrap{grid-template-columns:1fr}
+ .photo-editorial{grid-template-columns:1fr 1fr;grid-template-rows:230px 145px 145px}
+ .photo-editorial .photo-large{grid-column:1/3;grid-row:1}
+ .photo-editorial figure:nth-child(4),.photo-editorial figure:nth-child(5){grid-column:auto}
+ .route-bottom span{float:none;display:block;margin-top:4px}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap">
-<div class="eyebrow">2027 JAPAN SKI TRIP · ITINERARY</div>
-<h1>2027 單板行程<br>短版 × 長版一起看。</h1>
-<p class="lead">我們都是單板。這頁只整理：白馬／雅竹典典延伸、每天行程、交通、住宿、費用與要買的裝備。</p>
-<div class="topmeta"><span class="pill">📅 1/28–2/3</span><span class="pill">🏔 白馬 → 苗場 → 東京</span><span class="pill">👥 9/23 人數截止</span></div>
-</div></header>
+
+<header class="editorial-hero">
+  <div class="wrap">
+    <div class="hero-topline">
+      <span>HAKUBA / NAEBA / TOKYO</span>
+      <span>WINTER 2027</span>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-main">
+        <div class="hero-season">01 — 02 / 2027</div>
+        <h1><span>白馬</span><br>SNOWBOARD<br>TRIP</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-joke">
+          <strong>平常人看短版就好。</strong>
+          <span>長版是瘋瘋癲癲的竹自己的行程。</span>
+        </p>
+      </div>
+
+      <div class="hero-side">
+        <div class="hero-side-label">CHOOSE YOUR ROUTE</div>
+        <a class="route-card route-normal" href="#schedule">
+          <span class="route-index">01</span>
+          <div>
+            <small>NORMAL PEOPLE</small>
+            <b>4天3夜｜白馬短版</b>
+            <p>Plan A / Plan B · 兩天單板</p>
+          </div>
+          <i>↘</i>
+        </a>
+
+        <a class="route-card route-chaos" href="#long-trip">
+          <span class="route-index">02</span>
+          <div>
+            <small>竹の CHAOS ROUTE</small>
+            <b>白馬 → 苗場 → 東京</b>
+            <p>長版自己的瘋癲行程</p>
+          </div>
+          <i>↘</i>
+        </a>
+
+        <div class="hero-note">
+          <span>RSVP</span>
+          <b>09 / 23</b>
+          <p>先把人數確定，交通與住宿才好一起處理。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
 <nav><div class="wrap"><a href="#versions">版本</a><a href="#schedule">每日行程</a><a href="#transport">交通</a><a href="#stay">住宿</a><a href="#money">費用</a><a href="#packing">清單</a><a href="#rsvp">9/23 統計</a></div></nav>
 <main class="wrap">
 
 <section id="versions">
-  <h2>白馬／雅竹典典延伸</h2><p class="sub">兩個版本直接並排比較，不用切換。</p>
+  <h2>短版／長版</h2><p class="sub">兩個版本直接並排比較，不用切換。</p>
   
 <div class="compare-table">
- <div class="compare-head"><span></span><b>白馬短版 A／B</b><b>雅竹・典典｜白馬＋苗場</b></div>
+ <div class="compare-head"><span></span><b>白馬短版 A／B</b><b>長版｜白馬＋苗場</b></div>
  <div><span>日期</span><b>1/28或1/29–2/1</b><b>1/28–2/3</b></div>
  <div><span>住宿</span><span>白馬</span><span>白馬＋苗場朋友家＋東京</span></div>
  <div><span>單板</span><span>白馬 2 滑</span><span>白馬後延伸苗場，約 4 滑</span></div>
@@ -104,22 +400,44 @@ section{padding:28px 0}h2{font-size:23px}
 </div>
 
 
-<div class="todo-now"><b>現在只差 3 件事</b><span>① 9/23 確認白馬參加人數＋雅竹典典延伸行程</span><span>② 長版白馬→苗場包車詢價</span><span>③ 雅竹・典典的航班＋東京住宿</span></div>
+<div class="todo-now"><b>現在只差 3 件事</b><span>① 9/23 確認白馬參加人數</span><span>② 長版白馬→苗場包車詢價</span><span>③ 長版航班＋東京住宿</span></div>
 
 </section>
-<section id="schedule"><h2>兩種行程直接比較</h2><p class="sub">不用再點按。左邊短版、右邊長版；手機會自動上下排列。</p><div class="plans-side-by-side">
+<section id="schedule"><h2>大家的白馬行程｜4天3夜・2滑</h2><p class="sub">大家都是 4天3夜・2滑；Plan A / B 只差進白馬的方式。竹自己的長版延伸另外放下面。</p><div class="plans-side-by-side">
 <div id="plan-short" class="plan-panel plan-column">
-<div class="plan-title"><div><h2>白馬短版｜Plan A / B</h2><p class="sub">都是 4天3夜、1/30＋1/31 兩天單板；差別在去程。</p></div><span class="pill">2 滑</span></div>
+<div class="plan-title"><div><h2>白馬｜Plan A / Plan B</h2><p class="sub">全員都是 4天3夜・2滑。差別只在「1/28 先到東京」還是「1/29 凌晨直接飛成田進白馬」。</p></div><span class="pill">4天3夜 · 2滑</span></div>
+<div class="ab-compare">
+<div class="ab-row ab-title"><span></span><b>PLAN A</b><b>PLAN B</b></div>
+<div class="ab-row"><span>出發</span><b>1/28 先飛東京</b><b>1/29 凌晨飛</b></div>
+<div class="ab-row"><span>第一晚</span><span>東京住宿</span><span>白馬住宿</span></div>
+<div class="ab-row"><span>1/29</span><span>東京 → 白馬，較輕鬆</span><span>成田 → 白馬，移動較硬</span></div>
+<div class="ab-row"><span>滑雪</span><span>1/30＋1/31</span><span>1/30＋1/31</span></div>
+<div class="ab-row"><span>2/1</span><span>白馬 → 東京 → 台灣</span><span>白馬 → 東京 → 台灣</span></div>
+<div class="ab-row"><span>特色</span><span>比較舒服、少紅眼疲勞</span><span>少一晚東京住宿、比較省</span></div>
+</div>
 <div class="ab-grid">
-<div class="ab-card"><div class="ab-head"><span>PLAN A</span><b>1/28 先飛東京</b></div><p class="ab-note">比較從容，隔天再進白馬。</p><div class="mini-days">
-<div><b>1/28</b><span>桃園 ✈ 東京｜東京住宿</span></div><div><b>1/29</b><span>東京 → 白馬｜入住＋租單板裝備</span></div><div class="ski"><b>1/30</b><span>🏂 白馬 Day 1｜教練</span></div><div class="ski"><b>1/31</b><span>🏂 白馬 Day 2｜教練</span></div><div class="move"><b>2/1</b><span>白馬 → 東京 → 台灣</span></div></div></div>
-<div class="ab-card"><div class="ab-head"><span>PLAN B</span><b>1/29 凌晨飛</b></div><p class="ab-note">少一晚東京住宿，但第一天移動比較硬。</p><div class="mini-days">
-<div class="move"><b>1/29</b><span>凌晨桃園 ✈ 成田 → 直接進白馬</span></div><div class="ski"><b>1/30</b><span>🏂 白馬 Day 1｜教練</span></div><div class="ski"><b>1/31</b><span>🏂 白馬 Day 2｜教練</span></div><div class="move"><b>2/1</b><span>白馬 → 東京 → 台灣</span></div></div></div>
-</div><div class="ab-bottom"><b>共同：</b>1/29 入住白馬 → 1/30、1/31 單板 → 2/1 離開白馬。</div></div>
-<div id="plan-long" class="plan-panel plan-column">
- <div class="plan-title"><div><h2>雅竹・典典｜白馬＋苗場</h2><p class="sub">白馬後前往苗場，跟認識的人一起住；苗場兩滑後回東京。</p></div><span class="pill">7天6夜</span></div>
+<div class="ab-card plan-a"><div class="ab-head"><span>PLAN A</span><b>1/28 先到東京｜比較舒服版</b></div><p class="ab-note">適合不想一下飛機就直接坐長途車進白馬的人。</p><div class="mini-days detailed">
+<div class="move"><b>1/28 四</b><span><strong>桃園 ✈ 東京</strong><br>抵達東京 → 入住東京住宿 → 吃飯、休息。<br><em>航班：待人數確認後一起看。</em></span></div>
+<div class="move"><b>1/29 五</b><span><strong>東京 → 白馬</strong><br>早餐 → 前往白馬 → 民宿入住 → 租單板裝備／試鞋／調 binding → 晚餐。<br><em>交通：東京→長野→白馬，或冬季直達巴士，之後比價。</em></span></div>
+<div class="ski"><b>1/30 六</b><span><strong>🏂 白馬 Day 1｜教練</strong><br>早餐 → 裝備 → 08:30 左右上課 → 約 15:30 結束 → 晚餐 → 回顧。</span></div>
+<div class="ski"><b>1/31 日</b><span><strong>🏂 白馬 Day 2｜教練</strong><br>第二天單板 → 約 15:30 結束 → 還裝備／整理 → 晚餐 → 收行李。</span></div>
+<div class="move"><b>2/1 一</b><span><strong>白馬 → 東京 → 台灣</strong><br>退房 → 離開白馬 → 東京／機場 → 回台灣。<br><em>回程時間待機票決定。</em></span></div>
+</div><div class="plan-tags"><span>✓ 比較不累</span><span>✓ 1/29 不用紅眼＋長途車</span><span>＋ 多一晚東京住宿</span></div></div>
+<div class="ab-card plan-b"><div class="ab-head"><span>PLAN B</span><b>1/29 凌晨直飛｜比較省版</b></div><p class="ab-note">少一晚東京住宿，但 1/29 會是整趟最累的一天。</p><div class="mini-days detailed">
+<div class="move"><b>1/29 五</b><span><strong>桃園 → 成田 → 白馬</strong><br>00:00 桃園 T1 集合<br>02:30 GK012 → 06:35 成田 T3<br>早餐／入境 → 10:00 Snowliner<br>15:50 五龍 Escal → 民宿<br>租單板裝備 → 晚餐 → 休息。</span></div>
+<div class="ski"><b>1/30 六</b><span><strong>🏂 白馬 Day 1｜教練</strong><br>06:30–07:00 早餐 → 07:30 裝備 → 08:30 上課 → 15:30 結束 → 晚餐／回顧。</span></div>
+<div class="ski"><b>1/31 日</b><span><strong>🏂 白馬 Day 2｜教練</strong><br>08:30 上課 → 15:30 結束 → 還裝備／整理 → 晚餐 → 收行李。</span></div>
+<div class="move"><b>2/1 一</b><span><strong>白馬 → 東京 → 台灣</strong><br>退房 → 離開白馬 → 東京／機場 → 回台灣。<br><em>回程交通與航班待確認。</em></span></div>
+</div><div class="plan-tags"><span>✓ 少一晚東京住宿</span><span>✓ 行程比較短</span><span>！1/29 移動很硬</span></div></div>
+</div>
+<div class="ab-bottom"><b>目前共同核心：</b>1/30＋1/31 兩天單板教練；白馬方案採 4天3夜・2滑價格。9/23 人數確定後，再一起鎖航班、住宿與交通。</div>
+</div><section class="long-trip-section" id="long-trip"><div class="long-trip-heading">
+<small>LONG PLAN</small><h2>長版行程｜白馬 → 苗場 → 東京</h2>
+<p>白馬行程結束後繼續前往苗場，最後回東京住一晚再回台灣。</p>
+</div><div id="plan-long" class="plan-panel plan-column hidden-column">
+ <div class="plan-title"><div><h2>長版｜白馬＋苗場</h2><p class="sub">白馬後前往苗場，跟認識的人一起住；苗場兩滑後回東京。</p></div><span class="pill">7天6夜</span></div>
  <div class="legend"><span>🟤 移動日</span><span>🏂 單板日</span><span>🕒 粗體＝已確認時間</span></div><div class="timeline">
-  <div class="day move"><div class="date">1/28 四</div><div><h3>桃園 → 東京 → 白馬</h3><p>雅竹、典典先出發；航班最後一起確認。抵達後入住、整理裝備。</p></div></div>
+  <div class="day move"><div class="date">1/28 四</div><div><h3>桃園 → 東京 → 白馬</h3><p>延伸行程先出發；航班最後一起確認。抵達後入住、整理裝備。</p></div></div>
   <div class="day"><div class="date">1/29 五</div><div><h3>白馬 Day 1</h3><p>早餐 → 滑雪 → 晚餐 → 回住宿。</p></div></div>
   <div class="day"><div class="date">1/30 六</div><div><h3>白馬 Day 2＋教練</h3><p>完整教練日；晚上整理移動行李。</p></div></div>
   <div class="day move"><div class="date">1/31 日</div><div><h3>白馬 → 苗場</h3><p>退房 → 移動 → 苗場 → 跟認識的人會合入住。優先比較包車直達。</p></div></div>
@@ -127,47 +445,61 @@ section{padding:28px 0}h2{font-size:23px}
   <div class="day"><div class="date">2/2 二</div><div><h3>苗場 Day 2 → 東京</h3><p>白天滑雪 → 收裝備 → 越後湯澤 → 東京，東京住一晚。</p></div></div>
   <div class="day move"><div class="date">2/3 三</div><div><h3>東京 → 桃園</h3><p>依最後購買的回程航班前往機場。</p></div></div>
  </div>
+</section>
 </div>
 </section>
 
 
 
 
-<section id="transport"><h2>交通｜直接照這裡走</h2><p class="sub">把我們前面已經確認的時間、票價與長版轉乘方式直接放進來。</p>
 
-<div class="transport-tabs-note"><b>短版：</b>成田 ↔ 白馬直接 Snowliner。　<b>雅竹・典典：</b>1/31 從白馬前往苗場；2/2 苗場滑完回東京。</div>
+<section id="transport">
+  <div class="section-eyebrow">GETTING THERE</div>
+  <h2>交通｜Plan A / Plan B 兩欄看</h2>
+  <p class="sub">大家都是白馬 4天3夜・2滑；交通只看你選「先住東京」還是「凌晨直飛成田進白馬」。</p>
 
-<div class="transport-list">
-<div class="trow confirmed"><div class="ticon">✈️</div><div><b>短版｜1/29 桃園 → 成田</b><p>Jetstar Japan <strong>GK012</strong> · 桃園 T1 <strong>02:30</strong> → 成田 T3 <strong>06:35</strong>。前一晚 1/28 就要到機場。</p></div><span class="status">已確認</span></div>
+  <div class="transport-ab">
+    <article class="transport-route">
+      <div class="route-head">
+        <span>PLAN A</span><b>先到東京｜舒服版</b>
+        <p>多一晚東京，隔天再進白馬。適合不想紅眼＋長途移動的人。</p>
+      </div>
+      <div class="route-line"><i>01</i><div><small>1/28</small><b>桃園 → 東京</b><p>抵達後住東京一晚，吃飯、休息。</p></div></div>
+      <div class="route-line"><i>02</i><div><small>1/29</small><b>東京 → 白馬</b><p>新幹線／冬季巴士擇一；到白馬後入住、領裝備。</p></div></div>
+      <div class="route-line snow"><i>03</i><div><small>1/30–1/31</small><b>白馬 Snowboard × 2</b><p>兩天單板，課程時段依表單安排。</p></div></div>
+      <div class="route-line"><i>04</i><div><small>2/1</small><b>白馬 → 東京／機場 → 台灣</b><p>回程依最後航班反推離開白馬時間。</p></div></div>
+      <div class="route-bottom">舒服一點 <span>＋ 東京住宿 1 晚</span></div>
+    </article>
 
-<div class="trow confirmed"><div class="ticon">🚌</div><div><b>短版｜1/29 成田 → 白馬</b><p>Snowliner <strong>SL103B</strong> · 成田 T3 <strong>10:00</strong> → 五龍 Escal <strong>15:50</strong> · <strong>¥12,500／人</strong>。</p><div class="route-line">NRT T3 10:00 → 五龍 Escal 15:50 → 民宿</div></div><a class="mini-link" href="https://www.snowliner.jp" target="_blank">Snowliner ↗</a></div>
-
-<div class="trow"><div class="ticon">🏠</div><div><b>五龍 Escal → 白馬住宿</b><p>抵達五龍後接民宿／當地接駁。先前抓 <strong>¥1,500／次</strong> 作預算，實際以民宿安排為準。</p></div><span class="status wait">住宿確認後</span></div>
-
-<div class="trow important"><div class="ticon">🚐</div><div><b>雅竹・典典｜1/31 白馬 → 苗場｜首選</b><p><strong>直接包車／接送。</strong>從白馬住宿把人、行李、雪具一起載到苗場朋友那邊。這是目前最想採用的方案，等 9/23 確認苗場組人數後直接詢車價。</p><div class="route-line">白馬住宿 → 🚐 包車 → 苗場朋友家</div></div><span class="status wait">9/23 詢價</span></div>
-
-<div class="trow"><div class="ticon">🚌</div><div><b>雅竹・典典｜1/31 白馬 → 苗場｜大眾運輸備案①</b><p>先從 <strong>白馬／五龍 → 長野站</strong>。目前可先用冬季成人單程 <strong>¥3,500</strong> 當預算；2026–27 正式冬季時刻預計約 11 月中旬更新。</p><div class="route-line">白馬 → 🚌 長野站</div></div><a class="mini-link" href="https://visit-nagano.alpico.co.jp/zh-hant/timetable/hakuba-nagano-winter-reserved" target="_blank">ALPICO ↗</a></div>
-
-<div class="trow"><div class="ticon">🚄</div><div><b>長版｜1/31 大眾運輸備案②</b><p>長野站 → 北陸新幹線／鐵路轉乘 → <strong>高崎</strong> → 上越新幹線 → <strong>越後湯澤</strong>。這段班次等日期接近再挑最順的一組，不現在寫死。</p><div class="route-line">長野 → 🚄 高崎 → 🚄 越後湯澤</div></div><span class="status wait">班次後補</span></div>
-
-<div class="trow"><div class="ticon">🚕</div><div><b>長版｜1/31 越後湯澤 → 苗場</b><p>最後一段搭冬季巴士或計程車。計程車目前參考：<strong>5 人車 ¥7,720</strong>、<strong>9 人車 ¥10,180</strong>。到苗場後直接去認識的人那邊住。</p><div class="route-line">越後湯澤 → 🚌／🚕 → 苗場朋友家</div></div><a class="mini-link" href="https://www.naeba.gr.jp/en/access/" target="_blank">苗場交通 ↗</a></div>
-
-<div class="trow important"><div class="ticon">🚄</div><div><b>雅竹・典典｜2/2 苗場 → 東京</b><p>苗場滑完 Day 2 → 回住宿拿行李 → 前往 <strong>越後湯澤</strong> → 搭 <strong>上越新幹線到東京</strong> → 東京住一晚。這樣 2/3 不用從苗場硬趕國際線。</p><div class="route-line">苗場 → 越後湯澤 → 🚄 東京 → 東京住宿</div></div><span class="status">行程確定</span></div>
-
-<div class="trow confirmed"><div class="ticon">🚌</div><div><b>短版｜2/2 白馬 → 成田</b><p>Snowliner <strong>SL104B</strong> · 五龍 Escal <strong>10:30</strong> → 成田 T3 <strong>17:00</strong> · <strong>¥12,500／人</strong>。</p><div class="route-line">五龍 Escal 10:30 → NRT T3 17:00</div></div><a class="mini-link" href="https://www.snowliner.jp" target="_blank">Snowliner ↗</a></div>
-
-<div class="trow confirmed"><div class="ticon">✈️</div><div><b>短版｜2/2 成田 → 桃園</b><p>Tigerair <strong>IT203</strong> · 成田 T2 <strong>20:25</strong> → 桃園 T1 <strong>23:25</strong>。</p></div><span class="status">已確認</span></div>
-</div>
-
-<div class="transport-summary">
-<div><small>短版 Snowliner</small><b>¥25,000／人 往返</b></div>
-<div><small>雅竹・典典｜苗場住宿</small><b>跟認識的人一起住</b></div>
-<div><small>1/31 白馬 → 苗場</small><b>包車優先｜大眾運輸備案</b></div>
-</div>
+    <article class="transport-route dark-route">
+      <div class="route-head">
+        <span>PLAN B</span><b>凌晨直飛｜省一晚版</b>
+        <p>1/29 一次進白馬，第一天比較硬，但少一晚東京住宿。</p>
+      </div>
+      <div class="route-line"><i>01</i><div><small>1/29</small><b>02:30 桃園 → 06:35 成田 T3</b><p>Jetstar GK012；00:00 左右機場集合。</p></div></div>
+      <div class="route-line"><i>02</i><div><small>1/29</small><b>10:00 成田 T3 → 15:50 五龍</b><p>Snowliner SL103B → Goryu Escal → 民宿。</p></div></div>
+      <div class="route-line snow"><i>03</i><div><small>1/30–1/31</small><b>白馬 Snowboard × 2</b><p>兩天單板；最後一天整理／歸還裝備。</p></div></div>
+      <div class="route-line"><i>04</i><div><small>2/1</small><b>白馬 → 東京／機場 → 台灣</b><p>回程班次等航班確定後一起鎖。</p></div></div>
+      <div class="route-bottom">比較省 <span>＋ 1/29 會很累</span></div>
+    </article>
+  </div>
 </section>
 
 
 
+
+<section id="hakuba-life">
+  <div class="section-eyebrow">HAKUBA DAYS</div>
+  <h2>我們真的會住在雪裡。</h2>
+  <p class="sub">照片只拿來當行程的氣氛，不另外做景點介紹。住宿、吃飯、雪山，就是這趟白馬的樣子。</p>
+  <div class="photo-editorial">
+    <figure class="photo-large"><img src="assets/hakuba-lodge.jpg" alt="Lodge ALP HAKUBA"><figcaption>LODGE ALP HAKUBA · STAY</figcaption></figure>
+    <figure><img src="assets/hakuba-mountain.jpg" alt="白馬雪山"><figcaption>HAKUBA · SNOW DAYS</figcaption></figure>
+    <figure><img src="assets/hakuba-dinner.jpg" alt="白馬住宿聚餐"><figcaption>DINNER · TOGETHER</figcaption></figure>
+    <figure><img src="assets/hakuba-food.jpg" alt="白馬餐食"><figcaption>EAT · REST · REPEAT</figcaption></figure>
+    <figure><img src="assets/hakuba-sign.jpg" alt="Lodge ALP HAKUBA 雪地招牌"><figcaption>HOME IN HAKUBA</figcaption></figure>
+  </div>
+</section>
 <section id="stay"><h2>住宿</h2><div class="detail">
 <div class="card"><h3>🏠 白馬</h3><p>白馬爺爺民宿／Lodge ALP HAKUBA（暫定）。確認人數後再鎖房型。</p></div>
 <div class="card"><h3>🏠 苗場</h3><p><b>跟認識的人一起住。</b>目前不用另外找苗場住宿。</p></div>
@@ -196,8 +528,45 @@ section{padding:28px 0}h2{font-size:23px}
 </div>
 </section>
 
-<section id="money"><h2>費用</h2><p class="sub">現在先放會影響決策的數字，其他等人數確定。</p>
-<div class="detail"><div class="card"><h3>白馬基本版</h3><p>機票約 NT$20,000＋白馬交通／住宿／滑雪方案。最終仍依實際訂票為準。</p></div><div class="card"><h3>苗場延伸</h3><p>住宿已有安排；主要新增費用是白馬→苗場交通、苗場雪票／租借，以及 2/2 東京住宿。</p></div></div></section>
+
+<section id="estimate">
+  <div class="section-eyebrow">ROUGH BUDGET</div>
+  <h2>先抓多少錢？</h2>
+  <p class="sub">先用目前已經有的價格抓「每人」預算。白馬套餐以 4 人價 NT$33,800 計；實際機票、行李與交通訂下來後再覆蓋。</p>
+  <div class="estimate-wrap">
+    <div class="estimate-main">
+      <small>建議先準備</small>
+      <strong>NT$ 65,000</strong>
+      <span>／人左右</span>
+      <p>想買比較多裝備或吃好一點，抓 <b>NT$70,000</b> 會比較舒服。</p>
+    </div>
+    <div class="estimate-lines">
+      <div><span>白馬 4天3夜・2滑套餐</span><b>33,800</b></div>
+      <div><span>來回機票｜目前參考</span><b>20,311</b></div>
+      <div><span>白馬交通預留</span><b>5,100</b></div>
+      <div><span>餐食／零用預留</span><b>3,500</b></div>
+      <div><span>托運／雜支預留</span><b>2,500</b></div>
+      <div class="estimate-sum"><span>目前粗估</span><b>≈ 65,200</b></div>
+    </div>
+  </div>
+  <p class="tiny-note">※ 交通先用 Snowliner 來回 ¥25,000 約 NT$5,128 作預留；若白馬套餐已包含其中項目，總額會再下降。裝備「購買」不含在上面，因每個人差很多。</p>
+</section>
+<section id="money"><h2>費用｜自己輸入試算</h2>
+<p class="sub">保留上面的白馬人數價格；這裡可以把自己實際查到／訂到的金額直接輸入，自動算總額。</p>
+<div class="custom-budget">
+ <div class="budget-grid">
+  <label><span>✈️ 機票</span><div>NT$ <input class="budget-input" data-key="flight" inputmode="numeric" placeholder="0"></div></label>
+  <label><span>🏠 白馬方案</span><div>NT$ <input class="budget-input" data-key="hakuba" inputmode="numeric" placeholder="0"></div></label>
+  <label><span>🚌 交通</span><div>NT$ <input class="budget-input" data-key="transport" inputmode="numeric" placeholder="0"></div></label>
+  <label><span>🏂 教練／雪票</span><div>NT$ <input class="budget-input" data-key="lesson" inputmode="numeric" placeholder="0"></div></label>
+  <label><span>🥾 單板租借</span><div>NT$ <input class="budget-input" data-key="rental" inputmode="numeric" placeholder="0"></div></label>
+  <label><span>🧤 裝備購買</span><div>NT$ <input class="budget-input" data-key="gear" inputmode="numeric" placeholder="0"></div></label>
+  <label><span>🍜 吃飯／零用</span><div>NT$ <input class="budget-input" data-key="food" inputmode="numeric" placeholder="0"></div></label>
+  <label><span>＋ 其他</span><div>NT$ <input class="budget-input" data-key="other" inputmode="numeric" placeholder="0"></div></label>
+ </div>
+ <div class="budget-total"><span>我的預估總費用</span><strong id="budgetTotal">NT$ 0</strong></div>
+ <div class="budget-actions"><small>會自動保存在這台裝置</small><button type="button" id="budgetReset">清空</button></div>
+</div></section>
 
 
 <section id="packing"><h2>服裝・要買的東西</h2><p class="sub">這區恢復成原本比較好逛的卡片樣子，可以直接勾選。</p>
@@ -259,4 +628,4 @@ function setHakubaPeople(n,btn){
  document.getElementById('hpTotal').textContent='NT$'+(prices[n]*n).toLocaleString('en-US');
 }
 </script>
-</body></html>
+<script>(function(){const ins=[...document.querySelectorAll(".budget-input")],tot=document.getElementById("budgetTotal"),key="hakuba2027_budget";function n(v){return Number(String(v||"").replace(/[^0-9]/g,""))||0}function calc(){let sum=0,d={};ins.forEach(i=>{d[i.dataset.key]=i.value;sum+=n(i.value)});tot.textContent="NT$ "+sum.toLocaleString("zh-TW");localStorage.setItem(key,JSON.stringify(d))}try{let d=JSON.parse(localStorage.getItem(key)||"{}");ins.forEach(i=>{if(d[i.dataset.key]!=null)i.value=d[i.dataset.key]})}catch(e){}ins.forEach(i=>i.addEventListener("input",calc));document.getElementById("budgetReset").addEventListener("click",()=>{ins.forEach(i=>i.value="");calc()});calc()})();</script></body></html>

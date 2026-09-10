@@ -433,6 +433,50 @@ footer{border-top:1px solid var(--line);margin-top:20px}
  .fork-grid{grid-template-columns:1fr}.fork-card{min-height:auto}
  .long-summary{flex-direction:column;gap:5px}
 }
+
+/* V42 visual-first route */
+.visual-route{padding:54px 0 46px}
+.route-top{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:35px}
+.route-top h2{font-size:34px;line-height:1.08;letter-spacing:-.055em;margin:7px 0 0}
+.route-top h2 em{font-family:Georgia,serif;font-weight:400}
+.route-date{text-align:right;font:20px/1.05 Georgia,serif;letter-spacing:.04em;white-space:nowrap}
+.route-date span{font-size:12px;opacity:.5}
+.together-label{text-align:center;font-size:8px;letter-spacing:.24em;opacity:.45;margin-bottom:13px}
+.flow-common{display:flex;align-items:stretch;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18);padding:20px 0}
+.flow-node{flex:1;text-align:center;min-width:0}
+.flow-node .ico{display:block;font-size:22px;margin-bottom:7px}
+.flow-node small{display:block;font-size:7px;letter-spacing:.14em;opacity:.45}
+.flow-node b{display:block;font-size:12px;margin:5px 0}
+.flow-node p{font-size:9px;line-height:1.5;opacity:.58;margin:0}
+.flow-line{width:34px;align-self:center;height:1px;background:rgba(255,255,255,.22);position:relative}
+.flow-line:after{content:"›";position:absolute;right:-2px;top:-9px;font-size:14px;opacity:.4}
+.fork-marker{text-align:center;padding:30px 0 20px}
+.fork-marker span{font:10px Georgia,serif;opacity:.5}
+.fork-marker strong{display:block;font-size:28px;margin:3px 0;letter-spacing:-.05em}
+.fork-marker p{font-size:9px;opacity:.5;margin:0}
+.branch-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:12px;position:relative}
+.branch-grid:before{content:"";position:absolute;left:40%;top:-20px;width:1px;height:20px;background:rgba(255,255,255,.2)}
+.branch{border-top:2px solid rgba(255,255,255,.2);padding:22px 20px;background:rgba(255,255,255,.02)}
+.branch.chaos{background:rgba(255,255,255,.055);border-top-color:rgba(255,255,255,.55)}
+.branch-head{min-height:82px}
+.branch-head small{font-size:7px;letter-spacing:.18em;opacity:.45}
+.branch-head h3{font-size:17px;line-height:1.25;margin:6px 0 0}
+.branch.chaos .branch-head h3{font-family:Georgia,serif;font-size:20px;font-weight:400}
+.branch-step{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)}
+.branch-step time{font:12px Georgia,serif;opacity:.55}
+.branch-step b{font-size:11px}
+.branch-step p{font-size:9px;opacity:.55;margin:4px 0 0}
+.branch-step.strong b{font-size:13px}
+.branch-step.finish{border-bottom:1px solid rgba(255,255,255,.08)}
+.branch-arrow{text-align:center;font-size:11px;opacity:.35;padding:1px 0}
+.branch-arrow span{font-size:8px;margin-left:5px;letter-spacing:.05em}
+@media(max-width:760px){
+ .route-top{align-items:flex-start}.route-top h2{font-size:27px}.route-date{font-size:15px}
+ .flow-common{display:grid;grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr}
+ .flow-line{width:18px}.flow-node .ico{font-size:18px}.flow-node p{font-size:8px}
+ .branch-grid{grid-template-columns:1fr}.branch-grid:before{display:none}
+ .branch.normal{opacity:.78}.branch-head{min-height:auto;margin-bottom:16px}
+}
 </style>
 </head>
 <body>
@@ -451,7 +495,7 @@ footer{border-top:1px solid var(--line);margin-top:20px}
         <div class="hero-rule"></div>
         <p class="hero-joke">
           <strong>大家先看白馬主行程。</strong>
-          <span>2/1 開始分流：有人回台，竹滑完白馬 Day 3 後直接往苗場。</span>
+          <span>平常人看主行程就好。長版是瘋瘋癲癲的竹自己的行程。</span>
         </p>
       </div>
 
@@ -470,7 +514,7 @@ footer{border-top:1px solid var(--line);margin-top:20px}
         <a class="route-card route-chaos" href="#long-trip">
           <span class="route-index">02</span>
           <div>
-            <small>竹の CHAOS ROUTE</small>
+            <small>瘋瘋癲癲的竹自己的行程</small>
             <b>白馬 → 苗場 → 東京</b>
             <p>長版自己的瘋癲行程</p>
           </div>
@@ -593,54 +637,56 @@ footer{border-top:1px solid var(--line);margin-top:20px}
 
 
 
-<section id="final-route" class="final-route">
-  <div class="section-eyebrow">FINAL ROUTE · 2027</div>
-  <h2>1/29 一起進白馬，2/1 才分流。</h2>
-  <p class="sub">前兩個雪日大家一起。2/1 一般版回台；竹留下滑白馬 Day 3，滑完直接移動到苗場。</p>
 
-  <div class="route-tabs">
-    <a href="#everyone-route">🏂 大家｜白馬主行程</a>
-    <a href="#zhu-route">🌀 竹｜白馬＋苗場長版</a>
+
+<section id="visual-route" class="visual-route">
+  <div class="route-top">
+    <div>
+      <div class="section-eyebrow">HAKUBA → NAEBA · 2027</div>
+      <h2>平常人看左邊。<br><em>想知道竹到底在瘋什麼，看右邊。</em></h2>
+    </div>
+    <div class="route-date">JAN 29<br><span>→ FEB 04</span></div>
   </div>
 
-  <div class="common-route" id="everyone-route">
-    <div class="route-label">TOGETHER · HAKUBA</div>
-    <div class="common-days">
-      <div class="route-day"><time>1/29 <small>FRI</small></time><div><b>抵達白馬</b><span>✈️ 凌晨台灣出發 → 成田 → 10:00 巴士 → 15:30 白馬 → 入住、租裝備</span></div></div>
-      <div class="route-day"><time>1/30 <small>SAT</small></time><div><b>白馬 Day 1</b><span>🏂 教練課｜08:30 前往雪場 → 15:30 下課 → 晚餐、課程檢討</span></div></div>
-      <div class="route-day"><time>1/31 <small>SUN</small></time><div><b>白馬 Day 2</b><span>🏂 教練課｜08:30 前往雪場 → 15:30 下課 → 晚餐、整理行李</span></div></div>
-    </div>
+  <div class="together-label">EVERYONE · TOGETHER</div>
+  <div class="flow-common">
+    <div class="flow-node"><span class="ico">✈️</span><small>1/29 FRI</small><b>凌晨飛</b><p>桃園 → 成田</p></div>
+    <div class="flow-line"></div>
+    <div class="flow-node"><span class="ico">🚌</span><small>1/29</small><b>進白馬</b><p>10:00 巴士<br>15:30 五龍</p></div>
+    <div class="flow-line"></div>
+    <div class="flow-node snow"><span class="ico">🏂</span><small>1/30 SAT</small><b>HAKUBA · 01</b><p>教練課</p></div>
+    <div class="flow-line"></div>
+    <div class="flow-node snow"><span class="ico">🏂</span><small>1/31 SUN</small><b>HAKUBA · 02</b><p>教練課</p></div>
   </div>
 
-  <div class="fork-title"><span>2/1 MON</span><b>在這裡分流</b></div>
-  <div class="fork-grid">
-    <div class="fork-card return">
-      <div class="route-label">一般版 · RETURN</div>
-      <h3>✈️ 白馬 → 成田 → 台灣</h3>
-      <p><b>10:00</b> 前往五龍搭車</p>
-      <p><b>10:30</b> 回程巴士前往成田</p>
-      <p>抵達成田後依航班辦理登機，晚班機回台。</p>
-      <div class="route-end">白馬 2 滑 · 行程結束</div>
-    </div>
-
-    <div class="fork-card chaos" id="zhu-route">
-      <div class="route-label">竹の CHAOS ROUTE</div>
-      <h3>🏂 白馬 Day 3 → 苗場</h3>
-      <p>白天繼續滑白馬第三天。</p>
-      <p>下午／傍晚收裝備，<b>滑完直接移動白馬 → 苗場</b>。</p>
-      <p>抵達苗場後入住朋友／熟人住宿，休息準備隔天滑雪。</p>
-      <div class="route-end">不是多留白馬一晚 · 當天直接去苗場</div>
-    </div>
+  <div class="fork-marker">
+    <span>02 / 01 · MON</span>
+    <strong>分流</strong>
+    <p>從這裡開始，故事變成兩條。</p>
   </div>
 
-  <div class="long-extension">
-    <div class="route-label">LONG EXTENSION · NAEBA</div>
-    <div class="extension-days">
-      <div class="route-day"><time>2/2 <small>TUE</small></time><div><b>苗場 Day 1</b><span>🏂 完整滑一天｜苗場住宿</span></div></div>
-      <div class="route-day"><time>2/3 <small>WED</small></time><div><b>苗場 Day 2 → 東京</b><span>🏂 滑完 → 越後湯澤 → 東京｜東京住一晚</span></div></div>
-      <div class="route-day"><time>2/4 <small>THU</small></time><div><b>東京 → 台灣</b><span>✈️ 回程航班待確認｜長版行程結束</span></div></div>
-    </div>
-    <div class="long-summary"><b>竹長版</b><span>1/29–2/4 · 7天6夜 · 白馬3滑＋苗場2滑</span></div>
+  <div class="branch-grid">
+    <article class="branch normal">
+      <div class="branch-head"><small>NORMAL PEOPLE</small><h3>我差不多該回家了。</h3></div>
+      <div class="branch-step"><time>10:30</time><div><b>🚌 白馬 → 成田</b><p>五龍搭回程巴士</p></div></div>
+      <div class="branch-arrow">↓</div>
+      <div class="branch-step"><time>2/1</time><div><b>✈️ 晚班機回台</b><p>白馬 2 滑 · END</p></div></div>
+    </article>
+
+    <article class="branch chaos">
+      <div class="branch-head"><small>竹の CHAOS ROUTE</small><h3>瘋瘋癲癲的竹自己的行程。</h3></div>
+      <div class="branch-step"><time>2/1</time><div><b>🏂 HAKUBA · 03</b><p>白馬再滑一天</p></div></div>
+      <div class="branch-arrow">↓ <span>滑完直接走</span></div>
+      <div class="branch-step strong"><time>2/1</time><div><b>🚐 白馬 → 苗場</b><p>當晚抵達苗場</p></div></div>
+      <div class="branch-arrow">↓</div>
+      <div class="branch-step"><time>2/2</time><div><b>🏂 NAEBA · 01</b><p>苗場 Day 1</p></div></div>
+      <div class="branch-arrow">↓</div>
+      <div class="branch-step"><time>2/3</time><div><b>🏂 NAEBA · 02</b><p>苗場 Day 2</p></div></div>
+      <div class="branch-arrow">↓ <span>滑完去東京</span></div>
+      <div class="branch-step"><time>2/3</time><div><b>🚄 東京住一晚</b><p>苗場 → 越後湯澤 → 東京</p></div></div>
+      <div class="branch-arrow">↓</div>
+      <div class="branch-step finish"><time>2/4</time><div><b>✈️ 東京 → 台灣</b><p>7天6夜 · 白馬3滑＋苗場2滑</p></div></div>
+    </article>
   </div>
 </section>
 <section id="hakuba-life" class="photo-story">

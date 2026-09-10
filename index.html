@@ -397,6 +397,42 @@ footer{border-top:1px solid var(--line);margin-top:20px}
   .story-lodge{grid-column:1}
   .story-sign{grid-column:2}
 }
+
+/* V40 final itinerary */
+.final-route{padding:58px 0 34px}
+.final-route h2{font-size:31px;letter-spacing:-.045em;margin:6px 0 8px}
+.route-tabs{display:flex;gap:8px;margin:22px 0 32px}
+.route-tabs a{padding:10px 14px;border:1px solid rgba(255,255,255,.16);text-decoration:none;color:inherit;font-size:10px;letter-spacing:.02em}
+.route-label{font-size:8px;letter-spacing:.19em;opacity:.48;margin-bottom:11px}
+.common-route,.long-extension{border-top:1px solid rgba(255,255,255,.22);padding-top:20px}
+.common-days,.extension-days{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.route-day{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:14px 14px 18px 0;border-right:1px solid rgba(255,255,255,.09)}
+.route-day:last-child{border-right:0;padding-left:14px}
+.route-day:nth-child(2){padding-left:14px}
+.route-day time{font-family:Georgia,serif;font-size:16px}
+.route-day time small{display:block;font-family:inherit;font-size:7px;letter-spacing:.15em;opacity:.45;margin-top:3px}
+.route-day b{display:block;font-size:12px;margin-bottom:7px}
+.route-day span{font-size:10px;line-height:1.7;opacity:.66}
+.fork-title{display:flex;align-items:center;gap:14px;margin:34px 0 12px}
+.fork-title:before,.fork-title:after{content:"";height:1px;background:rgba(255,255,255,.15);flex:1}
+.fork-title span{font-family:Georgia,serif;font-size:11px;opacity:.5}
+.fork-title b{font-size:12px;white-space:nowrap}
+.fork-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:38px}
+.fork-card{padding:22px;border:1px solid rgba(255,255,255,.12);min-height:210px}
+.fork-card h3{font-size:17px;margin:4px 0 16px}
+.fork-card p{font-size:10px;line-height:1.75;margin:7px 0;opacity:.72}
+.fork-card.chaos{background:rgba(255,255,255,.035)}
+.route-end{margin-top:18px;padding-top:12px;border-top:1px solid rgba(255,255,255,.09);font-size:9px;opacity:.5}
+.long-extension{margin-top:4px}
+.long-summary{display:flex;justify-content:space-between;margin-top:16px;padding:13px 0;border-top:1px solid rgba(255,255,255,.1);font-size:10px}
+.long-summary span{opacity:.62}
+@media(max-width:760px){
+ .final-route h2{font-size:25px}.route-tabs{overflow:auto;white-space:nowrap}
+ .common-days,.extension-days{grid-template-columns:1fr}
+ .route-day,.route-day:nth-child(2),.route-day:last-child{padding:14px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}
+ .fork-grid{grid-template-columns:1fr}.fork-card{min-height:auto}
+ .long-summary{flex-direction:column;gap:5px}
+}
 </style>
 </head>
 <body>
@@ -414,8 +450,8 @@ footer{border-top:1px solid var(--line);margin-top:20px}
         <h1><span>白馬</span><br>SNOWBOARD<br>TRIP</h1>
         <div class="hero-rule"></div>
         <p class="hero-joke">
-          <strong>平常人看短版就好。</strong>
-          <span>長版是瘋瘋癲癲的竹自己的行程。</span>
+          <strong>大家先看白馬主行程。</strong>
+          <span>2/1 開始分流：有人回台，竹滑完白馬 Day 3 後直接往苗場。</span>
         </p>
       </div>
 
@@ -556,6 +592,57 @@ footer{border-top:1px solid var(--line);margin-top:20px}
 
 
 
+
+<section id="final-route" class="final-route">
+  <div class="section-eyebrow">FINAL ROUTE · 2027</div>
+  <h2>1/29 一起進白馬，2/1 才分流。</h2>
+  <p class="sub">前兩個雪日大家一起。2/1 一般版回台；竹留下滑白馬 Day 3，滑完直接移動到苗場。</p>
+
+  <div class="route-tabs">
+    <a href="#everyone-route">🏂 大家｜白馬主行程</a>
+    <a href="#zhu-route">🌀 竹｜白馬＋苗場長版</a>
+  </div>
+
+  <div class="common-route" id="everyone-route">
+    <div class="route-label">TOGETHER · HAKUBA</div>
+    <div class="common-days">
+      <div class="route-day"><time>1/29 <small>FRI</small></time><div><b>抵達白馬</b><span>✈️ 凌晨台灣出發 → 成田 → 10:00 巴士 → 15:30 白馬 → 入住、租裝備</span></div></div>
+      <div class="route-day"><time>1/30 <small>SAT</small></time><div><b>白馬 Day 1</b><span>🏂 教練課｜08:30 前往雪場 → 15:30 下課 → 晚餐、課程檢討</span></div></div>
+      <div class="route-day"><time>1/31 <small>SUN</small></time><div><b>白馬 Day 2</b><span>🏂 教練課｜08:30 前往雪場 → 15:30 下課 → 晚餐、整理行李</span></div></div>
+    </div>
+  </div>
+
+  <div class="fork-title"><span>2/1 MON</span><b>在這裡分流</b></div>
+  <div class="fork-grid">
+    <div class="fork-card return">
+      <div class="route-label">一般版 · RETURN</div>
+      <h3>✈️ 白馬 → 成田 → 台灣</h3>
+      <p><b>10:00</b> 前往五龍搭車</p>
+      <p><b>10:30</b> 回程巴士前往成田</p>
+      <p>抵達成田後依航班辦理登機，晚班機回台。</p>
+      <div class="route-end">白馬 2 滑 · 行程結束</div>
+    </div>
+
+    <div class="fork-card chaos" id="zhu-route">
+      <div class="route-label">竹の CHAOS ROUTE</div>
+      <h3>🏂 白馬 Day 3 → 苗場</h3>
+      <p>白天繼續滑白馬第三天。</p>
+      <p>下午／傍晚收裝備，<b>滑完直接移動白馬 → 苗場</b>。</p>
+      <p>抵達苗場後入住朋友／熟人住宿，休息準備隔天滑雪。</p>
+      <div class="route-end">不是多留白馬一晚 · 當天直接去苗場</div>
+    </div>
+  </div>
+
+  <div class="long-extension">
+    <div class="route-label">LONG EXTENSION · NAEBA</div>
+    <div class="extension-days">
+      <div class="route-day"><time>2/2 <small>TUE</small></time><div><b>苗場 Day 1</b><span>🏂 完整滑一天｜苗場住宿</span></div></div>
+      <div class="route-day"><time>2/3 <small>WED</small></time><div><b>苗場 Day 2 → 東京</b><span>🏂 滑完 → 越後湯澤 → 東京｜東京住一晚</span></div></div>
+      <div class="route-day"><time>2/4 <small>THU</small></time><div><b>東京 → 台灣</b><span>✈️ 回程航班待確認｜長版行程結束</span></div></div>
+    </div>
+    <div class="long-summary"><b>竹長版</b><span>1/29–2/4 · 7天6夜 · 白馬3滑＋苗場2滑</span></div>
+  </div>
+</section>
 <section id="hakuba-life" class="photo-story">
   <div class="section-eyebrow">HAKUBA NOTES</div>
   <div class="photo-story-head">

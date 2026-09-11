@@ -298,6 +298,23 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
 }
 </style>
 
+
+<style id="flight-style">
+.flight-section{padding-top:65px!important;padding-bottom:30px!important}
+.flight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.flight-card{border-radius:24px;padding:23px;background:#fffaf2;border:1px solid #ded1c0;box-shadow:0 12px 34px rgba(74,57,40,.06)}
+.flight-card strong{display:block;font:800 1.65rem/1.1 Georgia,serif;margin:12px 0 8px}.flight-card span{display:block;font-weight:700}.flight-card small{display:block;color:#81766b;line-height:1.5;margin-top:10px}
+.flight-who{font-size:.82rem;font-weight:800;letter-spacing:.03em}.friend-flight{background:#e8f0f2}.yachu-flight{background:#eee7f1}
+.flight-price-note{margin-top:13px;padding:14px 18px;border-radius:16px;background:#efe5d7;font-size:.9rem}
+@media(max-width:760px){.flight-grid{grid-template-columns:1fr}}
+</style>
+
+
+<style id="flight-status-style">
+.yachu-flight strong{font-size:1.35rem}
+.yachu-flight:after{content:"回程待比價";display:inline-block;margin-top:14px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.62);font-size:.72rem;font-weight:800;letter-spacing:.06em}
+</style>
+
 </head>
 <body>
 <div class="wrap">
@@ -352,6 +369,39 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
 </section>
 
 
+
+
+<section id="flights" class="section flight-section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">FLIGHTS</div>
+      <h2>機票這樣買 ✈️</h2>
+      <p>去程一起飛，2/22 開始分流後，各自搭自己的回程。</p>
+    </div>
+  </div>
+  <div class="flight-grid">
+    <article class="flight-card outbound">
+      <div class="flight-who">🩵💜 去程｜2/19</div>
+      <strong>Jetstar GK12</strong>
+      <span>台灣 → 東京</span>
+      <small>高中同學團＋雅竹一起出發</small>
+    </article>
+    <article class="flight-card friend-flight">
+      <div class="flight-who">🩵 高中同學團｜2/22</div>
+      <strong>EVA Air BR195</strong>
+      <span>東京 → 台灣</span>
+      <small>白馬 4D3N 結束後回程</small>
+    </article>
+    <article class="flight-card yachu-flight">
+      <div class="flight-who">💜 雅竹｜2/25</div>
+      <strong>晚班機｜首選 JX805 / BR195</strong>
+      <span>成田 → 桃園｜約 20:10–20:20 起飛</span>
+      <small>2/24 滑完住苗場，2/25 睡飽退房再前往成田。最後看票價選 JX805 或 BR195。</small>
+    </article>
+  </div>
+  <div class="flight-price-note">🩵 高中同學團：昨天抓的 <b>GK12＋BR195 約 NT$13,000／人</b>；實際購票價以結帳當下為準。<br>
+    💜 雅竹：<b>2/25 先鎖定成田晚班</b>，目前優先比較 JX805 與 BR195；等看到實際票價再決定。</div>
+</section>
 
 <section id="to-hakuba" class="section to-hakuba">
   <div class="section-head">
@@ -465,13 +515,13 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
   <div class="daily-plan">
     <div class="ops-title">每天怎麼走</div>
     <div class="daily-grid">
-      <div class="day-card"><b>2/19 FRI</b><strong>抵達白馬</strong><p>✈️ 台灣 → 東京<br>🚌 直接搭巴士 → 白馬<br>🏠 入住、整理裝備、早點休息</p></div>
+      <div class="day-card"><b>2/19 FRI</b><strong>抵達白馬</strong><p>✈️ GK12｜台灣 → 東京<br>🚌 直接搭巴士 → 白馬<br>🏠 入住、整理裝備、早點休息</p></div>
       <div class="day-card"><b>2/20 SAT</b><strong>白馬 Day 1</strong><p>早餐 → 套餐每日接駁 → 換裝<br>🏂 滑雪／課程 → 午餐 → 下午滑雪<br>♨️ 溫泉／晚餐</p></div>
       <div class="day-card"><b>2/21 SUN</b><strong>白馬 Day 2</strong><p>早餐 → 接駁 → 🏂 第二天滑雪<br>下午結束後整理裝備<br>晚上準備隔天分流</p></div>
-      <div class="day-card highlight-day"><b>2/22 MON</b><strong>分流日</strong><p>🩵 高中同學回程<br>💜 雅竹移動苗場<br>💚 典典前往苗場會合</p></div>
+      <div class="day-card highlight-day"><b>2/22 MON</b><strong>分流日</strong><p>🩵 高中同學｜BR195 回台<br>💜 雅竹移動苗場<br>💚 典典前往苗場會合</p></div>
       <div class="day-card"><b>2/23 TUE</b><strong>苗場 Day 1</strong><p>💜💚 苗場滑雪<br>完整滑一天<br>🏠 苗場住宿</p></div>
       <div class="day-card"><b>2/24 WED</b><strong>苗場 Day 2</strong><p>💜💚 第二天完整滑雪<br>滑完回住宿休息<br>不趕路、不搬行李</p></div>
-      <div class="day-card"><b>2/25 THU</b><strong>回台灣</strong><p>🏠 苗場退房<br>🚌／🚆 苗場 → 機場<br>✈️ 回台灣</p></div>
+      <div class="day-card"><b>2/25 THU</b><strong>回台灣</strong><p>🏠 苗場退房<br>🚌／🚆 苗場 → 機場<br>✈️ 晚班機回台｜JX805 / BR195 優先</p></div>
     </div>
   </div>
 
@@ -479,7 +529,7 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
     <div class="ops-panel">
       <div class="ops-title">🧳 出發前 Checklist</div>
       <div class="checklist">
-        <label><input type="checkbox" data-check="flight"> 機票</label>
+        <label><input type="checkbox" data-check="flight"> 機票｜GK12／BR195／2/25 晚班待買</label>
         <label><input type="checkbox" data-check="hakuba-bus"> 2/19 東京 → 白馬直達巴士</label>
         <label><input type="checkbox" data-check="friend-return"> 2/22 高中同學白馬 → 東京／機場</label>
         <label><input type="checkbox" data-check="yachu-transfer"> 2/22 雅竹白馬 → 苗場交通</label>
@@ -572,20 +622,20 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
     <div class="budget-card">
       <div class="budget-person">🩵 高中同學｜2/19–2/22</div>
       <div class="budget-desc">2/19–2/22｜白馬 4D3N｜滑雪 2 天</div>
-      <div class="money-row"><span>✈️ 台灣 → 東京機票</span><input data-person="friend" data-key="airfare" type="number" value="11000"></div>
+      <div class="money-row"><span>✈️ 台灣 → 東京機票</span><input data-person="friend" data-key="airfare" type="number" value="13000"></div>
       <div class="money-row"><span>🚌 東京 → 白馬直達巴士</span><input data-person="friend" data-key="bus" type="number" value="0" placeholder="待填"></div>
       <div class="money-row"><span>🏔️ 白馬 4D3N／2滑</span><input data-person="friend" data-key="hakuba" type="number" value="39800"></div>
       <div class="money-row"><span>🚌 2/22 白馬 → 東京／機場</span><input data-person="friend" data-key="return" type="number" value="0" placeholder="待填"></div>
       <div class="money-row"><span>🍜 餐食／零用</span><input data-person="friend" data-key="food" type="number" value="0" placeholder="待填"></div>
       <div class="money-row"><span>🥽 自購裝備</span><input data-person="friend" data-key="gear" type="number" value="0" placeholder="待填"></div>
-      <div class="money-total"><span>目前總計</span><strong id="friendTotal">NT$50,800</strong></div>
+      <div class="money-total"><span>目前總計</span><strong id="friendTotal">NT$52,800</strong></div>
       <div class="budget-note">白馬套裝目前先用 2 人同行的每人價 NT$39,800。</div>
     </div>
 
     <div class="budget-card">
       <div class="budget-person">💜 雅竹</div>
       <div class="budget-desc">2/19–2/25｜白馬 2 滑 ＋ 苗場 2 滑</div>
-      <div class="money-row"><span>✈️ 機票</span><input data-person="yachu" data-key="airfare" type="number" value="11000"></div>
+      <div class="money-row"><span>✈️ 機票｜GK12＋2/25 晚班</span><input data-person="yachu" data-key="airfare" type="number" value="11000"></div>
       <div class="money-row"><span>🏔️ 白馬 4D3N／2滑</span><input data-person="yachu" data-key="hakuba" type="number" value="39800"></div>
       <div class="money-row"><span>🚐 白馬 → 苗場</span><input data-person="yachu" data-key="transfer" type="number" value="5000"></div>
       <div class="money-row"><span>🏠 苗場住宿 3 晚</span><input data-person="yachu" data-key="naebaHotel" type="number" value="750"></div>

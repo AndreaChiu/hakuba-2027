@@ -343,6 +343,22 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
 @media(max-width:780px){.dual-budget-grid{grid-template-columns:1fr}.dual-budget-section{padding:20px 16px}.budget-person-head{align-items:flex-start}}
 </style>
 
+
+<style id="split-route-correction-style">
+.split-route{margin:8px 0;line-height:1.65}
+.split-route b{font-weight:800}
+</style>
+
+
+<style id="self-book-alert-style">
+.self-book-alert{max-width:1180px;margin:24px auto 10px;padding:22px 24px;display:grid;grid-template-columns:auto 1fr;gap:16px;background:#fff3dc;border:1.5px solid #dfb96e;border-radius:24px;color:#392f26;box-shadow:0 10px 30px rgba(70,50,25,.06)}
+.self-book-icon{width:46px;height:46px;display:grid;place-items:center;background:#392f26;border-radius:50%;font-size:1.25rem}
+.self-book-kicker{font-size:.72rem;font-weight:800;letter-spacing:.14em;color:#9b6c27}.self-book-alert h3{font:800 1.35rem/1.25 Georgia,"Noto Serif TC",serif;margin:5px 0 13px}
+.self-book-items{display:flex;flex-wrap:wrap;gap:8px}.self-book-items span{background:#fffaf1;border:1px solid #e5cfaa;border-radius:99px;padding:7px 11px;font-size:.84rem;font-weight:700}
+.self-book-alert p{margin:13px 0 0;color:#776757;font-size:.86rem;line-height:1.65}
+@media(max-width:700px){.self-book-alert{margin:18px 14px 8px;padding:18px 16px;grid-template-columns:1fr}.self-book-icon{width:40px;height:40px}}
+</style>
+
 </head>
 <body>
 <div class="wrap">
@@ -351,7 +367,7 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
   <div class="hero-inner">
     <div class="eyebrow">Trip Plan · Hakuba → Naeba · 2027</div>
     <h1>白馬之後，<br>苗場見。</h1>
-    <p><b>高中同學團：2/19–2/22</b>，一起完成白馬 4 天 3 夜、滑雪 2 天；典典前段帶小孩。2/22 雅竹與典典各自移動到苗場，抵達後還可以滑；2/23、2/24 再一起滑，2/24 滑完回住宿休息，2/25 苗場 → 機場 → 台灣。</p>
+    <p><b>高中同學團：2/19–2/22</b>，一起完成白馬 4 天 3 夜、滑雪 2 天；典典前段帶小孩。2/22 雅竹與典典各自移動到苗場，抵達苗場後滑半天；2/23、2/24 再一起滑，2/24 滑完回住宿休息，2/25 苗場 → 機場 → 台灣。</p>
     <div class="chips">
       <span class="chip">2/19–2/25</span>
 <span class="chip">🩵 高中同學 2/19–2/22</span>
@@ -361,6 +377,24 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
     </div>
   </div>
 </section>
+
+<div class="self-book-alert" id="self-book-alert">
+  <div class="self-book-icon">⚠️</div>
+  <div>
+    <div class="self-book-kicker">IMPORTANT · 需要自己另外買</div>
+    <h3>這些不在白馬套餐裡，要自己訂！</h3>
+    <div class="self-book-items">
+      <span>✈️ 台灣 ⇄ 日本機票</span>
+      <span>🚌 成田 ⇄ 白馬 Snow Liner</span>
+      <span>🚐 白馬 → 苗場交通</span>
+      <span>🎫 苗場雪票</span>
+      <span>🚐 苗場 → 機場交通</span>
+      <span>🛡️ 旅遊／滑雪保險</span>
+    </div>
+    <p>白馬 NT$39,800 套餐主要是白馬段的住宿、教學、雪具／雪衣雪褲、每日接駁、雪票、溫泉等；上面這些交通與後半段苗場項目要另外處理。</p>
+  </div>
+</div>
+
 
 <section class="topgrid">
   <div class="card people">
@@ -374,7 +408,7 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
   <div class="card quick">
     <div class="section-kicker">大家分流</div>
     <strong>7 天 6 夜</strong>
-    <div class="route"><b>🩵 高中同學：</b>台灣 → 東京 → 白馬 → 東京／機場 → 台灣<br><b>💜 雅竹：</b>台灣 → 東京 → 白馬 → 苗場 → 機場 → 台灣</div>
+    <div class="split-route"><b>4天3夜🩵 高中同學：</b>台灣 → 東京 → 白馬 → 東京／機場 → 台灣</div>台灣 → 東京 → 白馬 → 東京／機場 → 台灣<div class="split-route"><b>7 天 6 夜💜 雅竹：</b>台灣 → 東京 → 白馬 → 苗場 → 機場 → 台灣</div>台灣 → 東京 → 白馬 → 苗場 → 機場 → 台灣</div>
     <div class="mini">
       <div><b>🏂 4 滑</b><span>白馬 2 + 苗場 2</span></div>
       <div><b>🚐 1 次大移動</b><span>2/22 白馬 → 苗場</span></div>
@@ -481,7 +515,7 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
   <div class="row">
     <div class="date"><b>2/22</b><small>一 · D4</small></div>
     <div class="cell friends"><span class="tag">高中同學</span><strong>✈️ 白馬 → 回程</strong><small>4天3夜結束</small></div>
-    <div class="cell yachu"><span class="tag">雅竹</span><strong>🚌 白馬 → 苗場</strong><small>移動日</small></div>
+    <div class="cell yachu"><span class="tag">雅竹</span><strong>🚌 白馬 → 苗場</strong><small>移動日＋苗場滑半天</small></div>
     <div class="cell diandian"><span class="tag">典典</span><strong>🚄 → 苗場</strong><small>移動日 · 晚上會合</small></div>
   </div>
   <div class="row">
@@ -738,7 +772,7 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
       <div class="budget-simple-list">
         <div><span>✈️ GK12＋2/25 晚班機</span><strong>約 NT$13,000</strong></div>
         <div><span>🏔️ 白馬 4D3N／2 滑套餐</span><strong>NT$39,800</strong></div>
-        <div><span>🚐 2/22 白馬 → 苗場</span><strong>約 NT$5,000</strong><small>移動日抵達後仍可滑雪</small></div>
+        <div><span>🚐 2/22 白馬 → 苗場</span><strong>約 NT$5,000</strong><small>移動日抵達後苗場滑半天</small></div>
         <div><span>🏨 苗場住宿 3 晚</span><strong>NT$750</strong><small>2/22、2/23、2/24｜NT$250／晚</small></div>
         <div class="pending"><span>🎫 苗場雪票 × 3</span><strong>待填</strong></div>
         <div><span>🚐 2/25 苗場 → 機場</span><strong>約 NT$3,000</strong></div>

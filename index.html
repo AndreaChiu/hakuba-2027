@@ -172,19 +172,7 @@ a{color:#8c6246}
 </style>
 
 
-<style id="dual-budget-style">
-.budget-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
-.budget-card{padding:24px;border:1px solid var(--line);border-radius:24px}
-.budget-person{font-size:1.3rem;font-weight:800;margin-bottom:4px}
-.budget-desc{color:var(--muted);font-size:.92rem;margin-bottom:18px}
-.money-row{display:grid;grid-template-columns:1fr 128px;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
-.money-row input{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:12px;padding:9px 10px;text-align:right;font:inherit}
-.money-total{display:flex;justify-content:space-between;align-items:end;margin-top:18px;padding-top:4px}
-.money-total strong{font-size:1.45rem}
-.budget-note{margin-top:10px;color:var(--muted);font-size:.86rem;line-height:1.55}
-.reset-btn{margin-top:16px;border:1px solid var(--line);border-radius:999px;padding:10px 16px;cursor:pointer}
-@media(max-width:760px){.budget-grid{grid-template-columns:1fr}.money-row{grid-template-columns:1fr 115px}}
-</style>
+
 
 
 <style id="editorial-luxury">
@@ -315,6 +303,46 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
 .yachu-flight:after{content:"回程待比價";display:inline-block;margin-top:14px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.62);font-size:.72rem;font-weight:800;letter-spacing:.06em}
 </style>
 
+
+<style id="gear-package-added-style">
+.gear-extra-note{max-width:1180px;margin:18px auto 30px;background:#eee4d6;border:1px solid #dac8b4;border-radius:24px;padding:22px}
+.gear-extra-title{font:800 1.15rem/1.2 Georgia,"Noto Serif TC",serif;margin-bottom:14px}
+.gear-extra-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gear-extra-grid>div{background:rgba(255,255,255,.62);border-radius:15px;padding:13px 15px}
+.gear-extra-grid b{display:block;margin-bottom:5px}.gear-extra-grid span{font-size:.88rem;line-height:1.6;color:#776b61}
+.package-price-wrap{margin-top:32px;border-top:1px solid #d8c7b4;padding-top:30px}.package-table-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:18px}
+.package-table-head h3{font:800 1.7rem/1.2 Georgia,"Noto Serif TC",serif;margin:5px 0 7px}.package-table-head p{max-width:680px;color:#776d63;line-height:1.65}
+.selected-package{min-width:220px;background:#382f29;color:#fff;border-radius:20px;padding:17px}.selected-package small,.selected-package span{display:block;opacity:.72}.selected-package strong{display:block;font-size:1.15rem;margin:5px 0}
+.package-table-scroll{overflow-x:auto;border-radius:20px;border:1px solid #d8c7b4}.package-table{width:100%;border-collapse:collapse;background:#fffaf3;min-width:620px}
+.package-table th,.package-table td{padding:14px 16px;text-align:center;border-bottom:1px solid #eadfd2}.package-table th{background:#e8ddcf;font-size:.82rem;letter-spacing:.06em}.package-table td:first-child{text-align:left}.package-table td small{display:block;color:#8a7c70;margin-top:3px}
+.package-selected{background:#efe3d3}.package-selected td{font-weight:700}.package-selected td:nth-child(3){background:#dcc8ae}
+.lesson-time{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:13px}.lesson-time>div{background:#f0e7db;border-radius:15px;padding:12px 14px}.lesson-time b,.lesson-time span{display:block}.lesson-time span{color:#82766b;font-size:.85rem;margin-top:3px}
+.package-reminder{margin-top:12px;padding:13px 16px;border-radius:15px;background:#382f29;color:#fff;font-size:.88rem;line-height:1.6}
+@media(max-width:760px){.gear-extra-grid,.lesson-time{grid-template-columns:1fr}.package-table-head{display:block}.selected-package{margin-top:14px}}
+</style>
+
+
+<style id="snowliner-confirmed-style">
+.confirmed-snowliner{max-width:1180px;margin:26px auto;padding:28px;border-radius:28px;background:#f5eee4;border:1px solid #d9cbbb}
+.confirmed-snowliner h3{font:800 1.65rem/1.2 Georgia,"Noto Serif TC",serif;margin:6px 0 18px}
+.snowliner-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.snowliner-card{background:#102033;color:#fff;border-radius:22px;padding:20px}
+.snowliner-card small{display:block;opacity:.62;letter-spacing:.08em;margin-bottom:9px}.snowliner-card b{display:inline-block;background:#fff;color:#102033;border-radius:99px;padding:5px 10px;margin-bottom:10px}
+.snowliner-card strong,.snowliner-card span{display:block}.snowliner-card strong{font-size:1.02rem;line-height:1.55}.snowliner-card span{font-size:1.15rem;margin-top:9px}.snowliner-card p{opacity:.68;font-size:.84rem;line-height:1.55;margin:9px 0 0}
+.snowliner-total{margin-top:13px;padding:13px 16px;background:#e8dccd;border-radius:15px}
+@media(max-width:760px){.snowliner-grid{grid-template-columns:1fr}}
+</style>
+
+
+<style id="dual-budget-style">
+.dual-budget-section{max-width:1180px;margin:34px auto;padding:30px;border-radius:30px;background:#f7f0e7;border:1px solid #dfd2c2;color:#352e29}
+.dual-budget-section .section-head h2{font:800 1.8rem/1.2 Georgia,"Noto Serif TC",serif;margin:6px 0}.dual-budget-section .section-head p{color:#7f7369;line-height:1.6}
+.dual-budget-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}.budget-person-card{background:#fffaf4;border:1px solid #e1d5c8;border-radius:24px;padding:22px}
+.budget-person-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.budget-person-head small{letter-spacing:.12em;color:#9d8d7d}.budget-person-head h3{font:800 1.35rem/1.3 Georgia,"Noto Serif TC",serif;margin:5px 0}.budget-person-head p{margin:0;color:#87796d}
+.budget-badge{background:#172638;color:#fff;border-radius:99px;padding:7px 10px;font-size:.76rem;white-space:nowrap}.budget-simple-list{margin-top:18px;border-top:1px solid #e9dfd4}
+.budget-simple-list>div{display:grid;grid-template-columns:1fr auto;gap:5px 14px;padding:13px 2px;border-bottom:1px solid #eee5dc;align-items:center}.budget-simple-list span{line-height:1.45}.budget-simple-list strong{font-size:.95rem}.budget-simple-list small{grid-column:1/-1;color:#9a8c80}
+.budget-simple-list .pending strong{color:#9a8c80;font-weight:600}.budget-subtotal{margin-top:18px;background:#172638;color:#fff;border-radius:18px;padding:16px}.budget-subtotal small,.budget-subtotal span{display:block;opacity:.68}.budget-subtotal b{display:block;font-size:1.45rem;margin:5px 0}
+@media(max-width:780px){.dual-budget-grid{grid-template-columns:1fr}.dual-budget-section{padding:20px 16px}.budget-person-head{align-items:flex-start}}
+</style>
+
 </head>
 <body>
 <div class="wrap">
@@ -323,12 +351,12 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
   <div class="hero-inner">
     <div class="eyebrow">Trip Plan · Hakuba → Naeba · 2027</div>
     <h1>白馬之後，<br>苗場見。</h1>
-    <p><b>高中同學團：2/19–2/22</b>，一起完成白馬 4 天 3 夜、滑雪 2 天；典典前段帶小孩。2/22 雅竹與典典各自移動到苗場，2/23、2/24 一起滑，2/24 滑完回住宿休息，2/25 苗場 → 機場 → 台灣。</p>
+    <p><b>高中同學團：2/19–2/22</b>，一起完成白馬 4 天 3 夜、滑雪 2 天；典典前段帶小孩。2/22 雅竹與典典各自移動到苗場，抵達後還可以滑；2/23、2/24 再一起滑，2/24 滑完回住宿休息，2/25 苗場 → 機場 → 台灣。</p>
     <div class="chips">
       <span class="chip">2/19–2/25</span>
 <span class="chip">🩵 高中同學 2/19–2/22</span>
       <span class="chip">白馬 2 滑</span>
-      <span class="chip">苗場 2 滑</span>
+      <span class="chip">苗場 3 滑</span>
       <span class="chip">2/22 苗場會合</span>
     </div>
   </div>
@@ -482,6 +510,29 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
 
 
 
+<section class="section">
+<div class="confirmed-snowliner" id="snowliner-confirmed">
+  <div class="eyebrow">SNOW LINER · CONFIRMED</div>
+  <h3>成田 ⇄ 白馬｜直達巴士</h3>
+  <div class="snowliner-grid">
+    <div class="snowliner-card">
+      <small>2/19 FRI · 去程</small>
+      <b>SL103B</b>
+      <strong>10:00 成田機場 → 約 16:00 白馬八方 BT</strong>
+      <span>¥12,500／人</span>
+      <p>接 GK12｜06:35 抵達成田，轉車緩衝約 3 小時 25 分。</p>
+    </div>
+    <div class="snowliner-card">
+      <small>2/22 MON · 🩵 高中同學回程</small>
+      <b>SL104B</b>
+      <strong>10:10 白馬八方 BT → 17:00 成田機場</strong>
+      <span>¥12,500／人</span>
+      <p>接 BR195｜20:20 成田起飛，轉機緩衝約 3 小時 20 分。</p>
+    </div>
+  </div>
+  <div class="snowliner-total">🚌 高中同學成田 ⇄ 白馬直達巴士｜來回 <b>¥25,000／人</b></div>
+</div>
+</section>
 <section id="trip-ops" class="section trip-ops">
   <div class="section-head">
     <div>
@@ -600,6 +651,46 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
     </article>
   </div>
   <div class="not-included"><b>另外不包含：</b> 台灣 ⇄ 日本機票、日本國內長途交通、餐食與個人消費、旅遊／滑雪保險、夜滑雪票。</div>
+
+<div class="gear-extra-note">
+  <div class="gear-extra-title">📝 裝備備註｜台灣先買也可以</div>
+  <div class="gear-extra-grid">
+    <div><b>🍑 防摔褲</b><span>大有運動約 NT$499 左右，可先買平價款。</span></div>
+    <div><b>🧤 滑雪手套</b><span>可以帶防水手套，裡面再加一雙內層小手套保暖。</span></div>
+    <div><b>🦵 護膝</b><span>想省錢可買運動型護膝，例如排球用護膝；重點是活動時合身、不容易滑動。</span></div>
+    <div><b>⚠️ 護腕＋手套</b><span>先買護腕，再戴著護腕一起試滑雪手套，避免手套買回去後裝不下。</span></div>
+  </div>
+</div>
+
+
+<div class="package-price-wrap" id="hakuba-package-table">
+  <div class="package-table-head">
+    <div>
+      <div class="eyebrow">26 | 27 HAKUBA PACKAGE</div>
+      <h3>白馬套餐完整表單</h3>
+      <p>把我們前面討論的 26｜27 白馬套餐價目放進整份旅行規劃。這次使用的是 <b>4D3N・2 滑・2 人同行</b>。</p>
+    </div>
+    <div class="selected-package"><small>這次採用</small><strong>4D3N・2 滑</strong><span>2 人同行｜NT$39,800／人</span></div>
+  </div>
+  <div class="package-table-scroll">
+    <table class="package-table">
+      <thead><tr><th>方案</th><th>1 人</th><th>2 人</th><th>3 人</th><th>4 人</th></tr></thead>
+      <tbody>
+        <tr><td><b>3D2N</b><small>2 滑</small></td><td>45,000</td><td>36,800</td><td>33,800</td><td>29,800</td></tr>
+        <tr class="package-selected"><td><b>4D3N</b><small>2 滑</small></td><td>49,800</td><td><strong>39,800</strong></td><td>36,800</td><td>33,800</td></tr>
+        <tr><td><b>4D3N</b><small>2.5 滑</small></td><td>55,000</td><td>42,800</td><td>39,800</td><td>36,800</td></tr>
+        <tr><td><b>5D4N</b><small>3 滑</small></td><td>69,800</td><td>53,800</td><td>45,800</td><td>42,800</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="lesson-time">
+    <div><b>🏂 全天課</b><span>5–6 小時</span></div>
+    <div><b>🌤️ 上午課</b><span>09:00–11:30</span></div>
+    <div><b>🌙 下午課</b><span>13:00–15:30</span></div>
+  </div>
+  <div class="package-reminder">🩵 高中同學＋💜 雅竹｜2/19–2/22｜白馬 4D3N｜2 滑，目前預算以 <b>NT$39,800／人</b> 計。</div>
+</div>
+
 </section>
 
 <div class="photo-story">
@@ -609,181 +700,60 @@ section{max-width:1120px!important;margin:0 auto!important;padding-left:24px!imp
   <figure><img src="https://2.bp.blogspot.com/-wJyAqXrNzTg/WGiOSxBK9CI/AAAAAAAAL0o/d1A47y9Kl9UyjVBvxrIaNCv0IImqyB4KgCLcB/s1600/top%2Bview.jpg" alt="苗場滑雪場"><figcaption>NAEBA · 2/22—2/25</figcaption></figure>
  </div>
 </div>
-<section id="budget" class="section budget-section">
+
+
+
+
+
+<section class="dual-budget-section" id="dual-budget">
   <div class="section-head">
     <div>
-      
-      
-      <p></p>
+      <div class="eyebrow">BUDGET · 分開看</div>
+      <h2>兩個行程，各算各的</h2>
+      <p>不做整趟合併總預算。機票目前都先抓 <b>約 NT$13,000／人</b>。</p>
     </div>
   </div>
 
-  <div class="budget-grid">
-    <div class="budget-card">
-      <div class="budget-person">🩵 高中同學｜2/19–2/22</div>
-      <div class="budget-desc">2/19–2/22｜白馬 4D3N｜滑雪 2 天</div>
-      <div class="money-row"><span>✈️ 台灣 → 東京機票</span><input data-person="friend" data-key="airfare" type="number" value="13000"></div>
-      <div class="money-row"><span>🚌 東京 → 白馬直達巴士</span><input data-person="friend" data-key="bus" type="number" value="0" placeholder="待填"></div>
-      <div class="money-row"><span>🏔️ 白馬 4D3N／2滑</span><input data-person="friend" data-key="hakuba" type="number" value="39800"></div>
-      <div class="money-row"><span>🚌 2/22 白馬 → 東京／機場</span><input data-person="friend" data-key="return" type="number" value="0" placeholder="待填"></div>
-      <div class="money-row"><span>🍜 餐食／零用</span><input data-person="friend" data-key="food" type="number" value="0" placeholder="待填"></div>
-      <div class="money-row"><span>🥽 自購裝備</span><input data-person="friend" data-key="gear" type="number" value="0" placeholder="待填"></div>
-      <div class="money-total"><span>目前總計</span><strong id="friendTotal">NT$52,800</strong></div>
-      <div class="budget-note">白馬套裝目前先用 2 人同行的每人價 NT$39,800。</div>
-    </div>
+  <div class="dual-budget-grid">
+    <article class="budget-person-card">
+      <div class="budget-person-head">
+        <div><small>🩵 HIGH SCHOOL FRIENDS</small><h3>高中同學｜2/19–2/22</h3><p>4 天 3 夜｜白馬 2 滑</p></div>
+        <span class="budget-badge">白馬段</span>
+      </div>
+      <div class="budget-simple-list">
+        <div><span>✈️ GK12＋BR195 機票</span><strong>約 NT$13,000</strong></div>
+        <div><span>🏔️ 白馬 4D3N／2 滑套餐</span><strong>NT$39,800</strong></div>
+        <div><span>🚌 成田 ⇄ 白馬 Snow Liner</span><strong>¥25,000</strong><small>SL103B＋SL104B，各 ¥12,500</small></div>
+        <div class="pending"><span>🍜 餐食／零用</span><strong>待填</strong></div>
+        <div class="pending"><span>🥽 自購裝備</span><strong>待填</strong></div>
+      </div>
+      <div class="budget-subtotal"><small>目前已知 NT$ 項目</small><b>約 NT$52,800</b><span>＋ Snow Liner ¥25,000 ＋餐食／裝備</span></div>
+    </article>
 
-    <div class="budget-card">
-      <div class="budget-person">💜 雅竹</div>
-      <div class="budget-desc">2/19–2/25｜白馬 2 滑 ＋ 苗場 2 滑</div>
-      <div class="money-row"><span>✈️ 機票｜GK12＋2/25 晚班</span><input data-person="yachu" data-key="airfare" type="number" value="11000"></div>
-      <div class="money-row"><span>🏔️ 白馬 4D3N／2滑</span><input data-person="yachu" data-key="hakuba" type="number" value="39800"></div>
-      <div class="money-row"><span>🚐 白馬 → 苗場</span><input data-person="yachu" data-key="transfer" type="number" value="5000"></div>
-      <div class="money-row"><span>🏠 苗場住宿 3 晚</span><input data-person="yachu" data-key="naebaHotel" type="number" value="750"></div>
-      <div class="money-row"><span>🎿 苗場雪票 2 天</span><input data-person="yachu" data-key="naebaLift" type="number" value="0" placeholder="待填"></div>
-      <div class="money-row"><span>🚐 苗場 → 東京／機場</span><input data-person="yachu" data-key="returnTransfer" type="number" value="3000"></div>
-      <div class="money-row"><span>🍜 餐食／零用</span><input data-person="yachu" data-key="food" type="number" value="5000"></div>
-      <div class="money-row"><span>🥽 自購裝備</span><input data-person="yachu" data-key="gear" type="number" value="0" placeholder="待填"></div>
-      <div class="money-total"><span>目前總計</span><strong id="yachuTotal">NT$64,550</strong></div>
-      <div class="budget-note">苗場住宿已改成 NT$250／晚 × 3 晚 ＝ NT$750。</div>
-    </div>
-  </div>
-  
-</section>
-
-
-
-<p class="sub">可以直接改數字，總額會自動算；瀏覽器會記住你填的預算。</p>
-
-<section class="money-wrap">
-  <div class="card money-card">
-    <div class="section-kicker">Budget tracker · 每人</div>
-    <div class="budget-list">
-      <div class="budget-row">
-        <label>✈️ 台灣 ↔ 日本機票<small>先填你目前抓到的價格</small></label>
-        <div class="money-input"><span>NT$</span><input class="budget" id="airfare" type="number" value="11000"></div>
+    <article class="budget-person-card">
+      <div class="budget-person-head">
+        <div><small>💜 YACHU</small><h3>雅竹｜2/19–2/25</h3><p>7 天 6 夜｜白馬 2 滑＋苗場 3 滑</p></div>
+        <span class="budget-badge">白馬＋苗場</span>
       </div>
-      <div class="budget-row">
-        <label>🏔️ 白馬 4天3夜套裝<small>暫以 2 人價估；之後可改</small></label>
-        <div class="money-input"><span>NT$</span><input class="budget" id="hakuba" type="number" value="39800"></div>
+      <div class="budget-simple-list">
+        <div><span>✈️ GK12＋2/25 晚班機</span><strong>約 NT$13,000</strong></div>
+        <div><span>🏔️ 白馬 4D3N／2 滑套餐</span><strong>NT$39,800</strong></div>
+        <div><span>🚐 2/22 白馬 → 苗場</span><strong>約 NT$5,000</strong><small>移動日抵達後仍可滑雪</small></div>
+        <div><span>🏨 苗場住宿 3 晚</span><strong>NT$750</strong><small>2/22、2/23、2/24｜NT$250／晚</small></div>
+        <div class="pending"><span>🎫 苗場雪票 × 3</span><strong>待填</strong></div>
+        <div><span>🚐 2/25 苗場 → 機場</span><strong>約 NT$3,000</strong></div>
+        <div><span>🍜 餐食／零用</span><strong>約 NT$5,000</strong></div>
+        <div class="pending"><span>🥽 自購裝備</span><strong>待填</strong></div>
       </div>
-      <div class="budget-row">
-        <label>🚐 白馬 → 苗場交通<small>先保留移動預算</small></label>
-        <div class="money-input"><span>NT$</span><input class="budget" id="transfer" type="number" value="5000"></div>
-      </div>
-      <div class="budget-row">
-        <label>🏨 苗場住宿<small>NT$250／晚 × 2 晚</small></label>
-        <div class="money-input"><span>NT$</span><input class="budget" id="naebaHotel" type="number" value="500"></div>
-      </div>
-      <div class="budget-row">
-        <label>🎫 苗場雪票 × 2<small>等確定票價後再補</small></label>
-        <div class="money-input"><span>NT$</span><input class="budget" id="naebaLift" type="number" value="0"></div>
-      </div>
-      <div class="budget-row">
-        <label>🚄 苗場 → 東京／機場<small>越後湯澤段＋新幹線／巴士</small></label>
-        <div class="money-input"><span>NT$</span><input class="budget" id="returnTransfer" type="number" value="3000"></div>
-      </div>
-      <div class="budget-row">
-        <label>🍜 吃飯＋零用錢<small>整趟先抓一個舒服額度</small></label>
-        <div class="money-input"><span>NT$</span><input class="budget" id="food" type="number" value="5000"></div>
-      </div>
-      <div class="budget-row">
-        <label>🧤 裝備／購物<small>不想算可填 0</small></label>
-        <div class="money-input"><span>NT$</span><input class="budget" id="gear" type="number" value="0"></div>
-      </div>
-    </div>
-    <div class="note">白馬套裝先放 NT$39,800 是「4天3夜 2滑、2人價」的暫估；如果最後人數不同，直接在上面改掉即可。</div>
-  </div>
-
-  <div class="card total-card">
-    <div>
-      <div class="total-label">ESTIMATED TOTAL</div>
-      <div class="total" id="total">NT$ 0</div>
-      <small>每人預估總花費</small>
-      <div class="breakdown" id="breakdown"></div>
-    </div>
-    <button class="reset" id="reset">重設預算</button>
+      <div class="budget-subtotal"><small>目前已知 NT$ 項目</small><b>約 NT$66,550</b><span>＋ 苗場 3 日雪票 ＋裝備</span></div>
+    </article>
   </div>
 </section>
 
 <div class="footer">Hakuba × Naeba · Trip Plan · 2027</div>
 </div>
 
-<script>
-const defaults={
- airfare:11000,hakuba:39800,transfer:5000,naebaHotel:750,naebaLift:0,returnTransfer:3000,food:5000,gear:0
-};
-const labels={
- airfare:"機票",hakuba:"白馬套裝",transfer:"白馬→苗場",naebaHotel:"苗場住宿",naebaLift:"苗場雪票",
- returnTransfer:"苗場→東京／機場",food:"餐食零用",gear:"裝備購物"
-};
-const inputs=[...document.querySelectorAll(".budget")];
-function money(n){return "NT$ "+Number(n||0).toLocaleString("zh-TW")}
-function load(){
- inputs.forEach(i=>{
-   const v=localStorage.getItem("hakubaB_"+i.id);
-   if(v!==null) i.value=v;
- });
- calc();
-}
-function calc(){
- let total=0, parts=[];
- inputs.forEach(i=>{
-   const v=Number(i.value||0); total+=v;
-   localStorage.setItem("hakubaB_"+i.id,i.value);
-   if(v>0) parts.push(labels[i.id]+" "+money(v).replace("NT$ ",""));
- });
- document.getElementById("total").textContent=money(total);
- document.getElementById("breakdown").innerHTML=parts.map(x=>"• "+x).join("<br>");
-}
-inputs.forEach(i=>i.addEventListener("input",calc));
-document.getElementById("reset").onclick=()=>{
- inputs.forEach(i=>{i.value=defaults[i.id];localStorage.removeItem("hakubaB_"+i.id)});
- calc();
-};
-load();
-</script>
 
-<script id="dual-budget-script">
-(() => {
-  const defaults = {
-    friend:{airfare:11000,bus:0,hakuba:39800,return:0,food:0,gear:0},
-    yachu:{airfare:11000,hakuba:39800,transfer:5000,naebaHotel:750,naebaLift:0,returnTransfer:3000,food:5000,gear:0}
-  };
-  const fmt = n => 'NT$' + Math.round(n).toLocaleString('en-US');
-  const inputs = [...document.querySelectorAll('#budget input[data-person]')];
-
-  function load(){
-    inputs.forEach(el=>{
-      const p=el.dataset.person, k=el.dataset.key;
-      const saved=localStorage.getItem(`hakubaB2_${p}_${k}`);
-      el.value = saved !== null ? saved : defaults[p][k];
-    });
-    calc();
-  }
-  function calc(){
-    ['friend','yachu'].forEach(p=>{
-      const total=inputs.filter(x=>x.dataset.person===p)
-        .reduce((s,x)=>s+(Number(x.value)||0),0);
-      const target=document.getElementById(p==='friend'?'friendTotal':'yachuTotal');
-      if(target) target.textContent=fmt(total);
-    });
-  }
-  inputs.forEach(el=>el.addEventListener('input',()=>{
-    localStorage.setItem(`hakubaB2_${el.dataset.person}_${el.dataset.key}`,el.value);
-    calc();
-  }));
-  const reset=document.getElementById('resetDualBudget');
-  if(reset) reset.addEventListener('click',()=>{
-    inputs.forEach(el=>{
-      const p=el.dataset.person,k=el.dataset.key;
-      el.value=defaults[p][k];
-      localStorage.removeItem(`hakubaB2_${p}_${k}`);
-    });
-    calc();
-  });
-  load();
-})();
-</script>
 
 
 <script id="trip-checklist-script">
